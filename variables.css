@@ -1,0 +1,463 @@
+/*
+======================================================================
+ZG REAL ESTATE DEVELOPMENT WEBSITE
+Global CSS Variables
+
+This file contains the variables used throughout the entire website.
+
+IMPORTANT:
+    - Change values in this file to update the website globally.
+    - Do NOT put actual CSS styling rules in this file.
+    - Other CSS files should reference these variables using var().
+
+Example:
+    background-color: var(--color-background);
+
+======================================================================
+*/
+
+
+/*
+======================================================================
+COLOR VARIABLES
+======================================================================
+
+Use these variables for colors throughout the website.
+
+To change the website's color scheme, you should only need to
+change the values in this section.
+======================================================================
+*/
+
+:root {
+
+    /* ------------------------------
+       Main Website Colors
+       ------------------------------ */
+
+    /* Main page background color */
+    --color-background: #F5F3EF;
+
+    /* Main text color */
+    --color-text: #000000;
+
+    /* Secondary/subtitle text color */
+    --color-sub-text: #666666;
+
+    /* Main brand color */
+    --color-primary: #1C1C1A;
+
+    /* Secondary brand color */
+    --color-secondary: #6F6B63;
+
+    /* Accent color used for highlights, buttons, borders, etc. */
+    --color-accent: #B08D57;
+
+
+    /* ------------------------------
+       Navigation Colors
+       ------------------------------ */
+
+    /* Navigation bar background */
+    --color-nav: rgba(255, 255, 255, 0.88);
+
+    /* Navigation text color */
+    --color-nav-text: #1C1C1A;
+
+    /* Navigation text color when hovered */
+    --color-nav-hover: #B08D57;
+
+    /* Navigation border color */
+    --color-nav-border: #4bccff;
+
+
+    /* ------------------------------
+       Footer Colors
+       ------------------------------ */
+
+    /* Footer background color */
+    --color-footer-background: #1C1C1A;
+
+    /* Footer main text color */
+    --color-footer-text: #FFFFFF;
+
+    /* Footer secondary text color */
+    --color-footer-sub-text: #aaaaaa;
+
+
+    /* ------------------------------
+       Button Colors
+       ------------------------------ */
+
+    /* Button background color */
+    --color-button-background: #000000;
+
+    /* Button text color */
+    --color-button-text: #ffffff;
+
+    /* Button background when hovered */
+    --color-button-hover: #4bccff;
+
+    /* Button text when hovered */
+    --color-button-hover-text: #000000;
+}
+
+
+/*
+======================================================================
+FONT VARIABLES
+======================================================================
+
+Change the fonts used throughout the website here.
+
+If using a custom font later, it can be added here.
+======================================================================
+*/
+
+:root {
+
+    /* Main font used for normal body text */
+    --font-main: Arial, Helvetica, sans-serif;
+
+    /* Font used for headings */
+    --font-heading: Arial, Helvetica, sans-serif;
+
+    /* Font used for navigation */
+    --font-navigation: Arial, Helvetica, sans-serif;
+
+    /* Font used for buttons */
+    --font-button: Arial, Helvetica, sans-serif;
+}
+
+
+/*
+======================================================================
+FONT SIZE VARIABLES
+======================================================================
+
+These control common text sizes throughout the website.
+
+Individual sections can still use their own sizes when necessary.
+======================================================================
+*/
+
+:root {
+
+    /* Main website body text */
+    --font-size-body: 16px;
+
+    /* Small text */
+    --font-size-small: 14px;
+
+    /* Navigation text */
+    --font-size-navigation: 16px;
+
+    /* Main page heading */
+    --font-size-h1: 48px;
+
+    /* Section heading */
+    --font-size-h2: 36px;
+
+    /* Smaller heading */
+    --font-size-h3: 28px;
+
+    /* Button text */
+    --font-size-button: 16px;
+}
+
+
+/*
+======================================================================
+FONT WEIGHT VARIABLES
+======================================================================
+*/
+
+:root {
+
+    /* Normal body text */
+    --font-weight-normal: 400;
+
+    /* Slightly emphasized text */
+    --font-weight-medium: 500;
+
+    /* Bold text */
+    --font-weight-bold: 700;
+}
+
+
+/*
+======================================================================
+NAVIGATION VARIABLES
+======================================================================
+
+These variables control the overall appearance and spacing
+of the navigation bar.
+======================================================================
+*/
+
+:root {
+
+    /* Height of the navigation bar */
+    --nav-height: 80px;
+
+    /* Horizontal/vertical padding inside the navigation */
+    --nav-padding: 20px;
+
+    /* Padding around each navigation item */
+    --nav-item-padding: 15px;
+
+    /* Space between navigation items */
+    --nav-item-gap: 10px;
+
+    /* Width of the navigation border */
+    --nav-border-width: 1px;
+
+    /* Navigation border radius */
+    --nav-border-radius: 0px;
+
+    /* Navigation shadow */
+    --nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    /* Distance between the logo and navigation links */
+    --nav-logo-margin: 30px;
+}
+
+
+/*
+======================================================================
+WEBSITE LAYOUT VARIABLES
+======================================================================
+
+These control the overall width and spacing of website content.
+======================================================================
+*/
+
+:root {
+
+    /* Maximum width of the main website content */
+    --content-max-width: 1200px;
+
+    /* Horizontal padding around website content */
+    --content-padding: 20px;
+
+    /* Default spacing between sections */
+    --section-spacing: 80px;
+
+    /* Default section top/bottom padding */
+    --section-padding: 80px;
+
+    /* Default section left/right padding */
+    --section-horizontal-padding: 20px;
+}
+
+
+/*
+======================================================================
+SPACING VARIABLES
+======================================================================
+
+These provide consistent spacing throughout the website.
+
+Use these instead of creating random spacing values whenever possible.
+======================================================================
+*/
+
+:root {
+
+    /* Extra-small spacing */
+    --spacing-xs: 5px;
+
+    /* Small spacing */
+    --spacing-sm: 10px;
+
+    /* Medium spacing */
+    --spacing-md: 20px;
+
+    /* Large spacing */
+    --spacing-lg: 40px;
+
+    /* Extra-large spacing */
+    --spacing-xl: 60px;
+
+    /* Very large spacing */
+    --spacing-xxl: 80px;
+}
+
+
+/*
+======================================================================
+BORDER VARIABLES
+======================================================================
+
+Common border settings used throughout the website.
+======================================================================
+*/
+
+:root {
+
+    /* Standard border width */
+    --border-width: 1px;
+
+    /* Standard border style */
+    --border-style: solid;
+
+    /* Default border color */
+    --border-color: #dddddd;
+
+    /* Small corner radius */
+    --border-radius-small: 4px;
+
+    /* Medium corner radius */
+    --border-radius-medium: 8px;
+
+    /* Large corner radius */
+    --border-radius-large: 16px;
+
+    /* Completely round elements */
+    --border-radius-round: 50%;
+}
+
+
+/*
+======================================================================
+BUTTON VARIABLES
+======================================================================
+*/
+
+:root {
+
+    /* Button padding */
+    --button-padding-vertical: 12px;
+    --button-padding-horizontal: 24px;
+
+    /* Button border width */
+    --button-border-width: 1px;
+
+    /* Button corner radius */
+    --button-border-radius: 6px;
+
+    /* Time it takes for button hover animations */
+    --button-transition-speed: 0.2s;
+}
+
+
+/*
+======================================================================
+IMAGE VARIABLES
+======================================================================
+
+These are useful for keeping images consistent throughout
+the website.
+======================================================================
+*/
+
+:root {
+
+    /* Default image corner radius */
+    --image-border-radius: 8px;
+
+    /* Default image aspect ratio */
+    --image-aspect-ratio: 16 / 9;
+}
+
+
+/*
+======================================================================
+SHADOW VARIABLES
+======================================================================
+
+Common shadows used throughout the website.
+======================================================================
+*/
+
+:root {
+
+    /* Small shadow */
+    --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    /* Medium shadow */
+    --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    /* Large shadow */
+    --shadow-large: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/*
+======================================================================
+TRANSITION VARIABLES
+======================================================================
+
+Controls how quickly animations and hover effects occur.
+======================================================================
+*/
+
+:root {
+
+    /* Fast transition */
+    --transition-fast: 0.15s ease;
+
+    /* Normal transition */
+    --transition-normal: 0.25s ease;
+
+    /* Slow transition */
+    --transition-slow: 0.4s ease;
+}
+
+
+/*
+======================================================================
+Z-INDEX VARIABLES
+======================================================================
+
+Controls which elements appear in front of other elements.
+
+Higher numbers appear above lower numbers.
+======================================================================
+*/
+
+:root {
+
+    /* Normal content */
+    --z-content: 1;
+
+    /* Images/cards that need slight priority */
+    --z-card: 10;
+
+    /* Navigation bar */
+    --z-navigation: 1000;
+
+    /* Modals/popups */
+    --z-modal: 2000;
+}
+
+
+/*
+======================================================================
+RESPONSIVE BREAKPOINT VARIABLES
+======================================================================
+
+These values can be used when creating media queries.
+
+NOTE:
+CSS variables cannot be directly used as the condition of a
+media query in standard CSS, so these values are primarily
+documentation/reference values.
+
+Common breakpoints:
+    Mobile:       < 768px
+    Tablet:       768px - 1023px
+    Desktop:      1024px+
+======================================================================
+*/
+
+/*
+    Mobile:
+    768px
+
+    Tablet:
+    1024px
+
+    Large Desktop:
+    1440px
+*/
