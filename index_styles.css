@@ -484,7 +484,7 @@ section p {
 .meet-us-header {
     max-width: 100%;
 
-    margin: 0 auto 150px;
+    margin: 0 auto 45px;
 
     text-align: center;
 }
@@ -541,8 +541,8 @@ section p {
    ============================================================ */
 
 .founder-image {
-    width: 220px;
-    height: 270px;
+    width: 350px;
+    height: 450px;
 
     overflow: hidden;
 
