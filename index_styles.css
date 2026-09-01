@@ -321,7 +321,7 @@ section p {
 .about-row {
     display: grid;
 
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1.35fr 1.0fr;
 
     align-items: center;
 
