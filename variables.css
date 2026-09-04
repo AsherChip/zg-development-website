@@ -30,28 +30,46 @@ change the values in this section.
 */
 
 :root {
+    /* ============================================================
+   COLORS
+   ============================================================ */
+
+:root {
+       /* Charcoal */
+    /* Warm off-white */
+           /* Charcoal text */
+     /* Muted gray */
+             /* Muted gold */
+
+
+
+
+
+
+}
+
 
     /* ------------------------------
        Main Website Colors
        ------------------------------ */
 
     /* Main page background color */
-    --color-background: #F5F3EF;
+    --color-background: #F7F6F2;   
 
     /* Main text color */
-    --color-text: #000000;
+    --color-text: #252525;  
 
     /* Secondary/subtitle text color */
     --color-sub-text: #666666;
 
     /* Main brand color */
-    --color-primary: #1C1C1A;
+    --color-primary: #252525;   
 
     /* Secondary brand color */
-    --color-secondary: #6F6B63;
+    --color-secondary: #666666;   
 
     /* Accent color used for highlights, buttons, borders, etc. */
-    --color-accent: #B08D57;
+    --color-accent: #C5A253;  
 
 
     /* ------------------------------
@@ -62,10 +80,10 @@ change the values in this section.
     --color-nav: rgba(255, 255, 255, 0.88);
 
     /* Navigation text color */
-    --color-nav-text: #1C1C1A;
+    --color-nav-text: #252525;
 
     /* Navigation text color when hovered */
-    --color-nav-hover: #B08D57;
+    --color-nav-hover: #C5A253;
 
     /* Navigation border color */
     --color-nav-border: #4bccff;
@@ -76,7 +94,7 @@ change the values in this section.
        ------------------------------ */
 
     /* Footer background color */
-    --color-footer-background: #1C1C1A;
+    --color-footer-background: #1D1D1D;
 
     /* Footer main text color */
     --color-footer-text: #FFFFFF;
