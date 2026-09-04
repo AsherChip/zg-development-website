@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meet Us | ZG Real Estate Development</title>
+
+    <!-- Website styles -->
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="about_styles.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         NAVIGATION
+         ============================================================ -->
+
+    <header class="nav">
+
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a class="nav-logo" href="index.html">
+                <img
+                    src="images/zg_logo.png"
+                    alt="ZG Development Logo"
+                >
+            </a>
+
+            <!-- Main Navigation -->
+            <nav class="nav-links">
+
+                <a href="index.html#home" class="nav-item">
+                    Home
+                </a>
+
+                <a href="index.html#about" class="nav-item">
+                    About Us
+                </a>
+
+                <a href="index.html#meet-us" class="nav-item">
+                    Meet Us
+                </a>
+
+                <!--<a href="index.html#projects" class="nav-item">
+                    Projects
+                </a>
+
+                <a href="index.html#portfolio" class="nav-item">
+                    Portfolio
+                </a>-->
+
+                <a href="index.html#contact" class="nav-item">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+ <main>
+
+    <!-- Back Arrow -->
+    <div class="back-button-container">
+
+    <a href="index.html#meet-us" class="back-button">
+        <span class="back-arrow">←</span>
+        Back
+    </a>
+
+    </div>
+
+    <!-- ========================================================
+         MEET US HEADER
+         ======================================================== -->
+
+    <section class="people-header">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                GET TO KNOW US
+            </p>
+
+            <h1>
+                The People Behind <br>ZG Real Estate Development.
+            </h1>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================================
+         FOUNDER SECTION
+         ======================================================== -->
+
+    <section class="founder-section">
+
+        <div class="section-container">
+
+            <!-- Founder Toggle -->
+
+            <div class="founder-selector">
+
+                <button
+                    class="founder-tab active"
+                    onclick="showFounder('zach', this)"
+                >
+                    Zach Denman
+                </button>
+
+                <button
+                    class="founder-tab"
+                    onclick="showFounder('gunnar', this)"
+                >
+                    Gunnar Inderlied
+                </button>
+
+            </div>
+
+
+            <!-- ==================================================
+                 ZACH PROFILE
+                 ================================================== -->
+
+            <article id="zach" class="person-profile active-founder">
+
+                <div class="person-image">
+                    <img
+                        src="images/zach.png"
+                        alt="Zachary J. Denman"
+                    >
+                </div>
+
+                <div class="person-info">
+
+                    <p class="section-label">
+                        CO-FOUNDER & 50% OWNER
+                    </p>
+
+                    <h2>
+                        Zachary J. Denman
+                    </h2>
+
+                    <p>
+                        Zachary J. Denman is a co-founder and 50% owner
+                        of ZG Real Estate Development. His background
+                        includes U.S. Army service and the completion of
+                        Military Police training in July 2026. During
+                        Basic Training, he was recognized with a
+                        Distinguished Leadership Award.
+                    </p>
+
+                    <p>
+                        Zach is currently pursuing a degree in Business
+                        Economics at Purdue University Fort Wayne's
+                        Doermer School of Business, with a minor in
+                        Political Science. He is expected to graduate
+                        in 2028 and has also completed coursework in
+                        management.
+                    </p>
+
+                    <p>
+                        In addition to his military background, Zach has
+                        experience as a legal assistant, providing
+                        exposure to legal processes, documentation, and
+                        professional networks. His leadership and
+                        professional experience support ZG's emphasis
+                        on accountability, organization, communication,
+                        and disciplined execution.
+                    </p>
+
+
+                    <!-- Zach Details -->
+                    <div class="person-details">
+
+                        <div class="person-detail-card">
+                            <h3>Education</h3>
+                            <p>
+                                Purdue University Fort Wayne<br>
+                                Business Economics<br>
+                                Minor in Political Science<br>
+                                Expected 2028
+                            </p>
+                        </div>
+
+                        <div class="person-detail-card">
+                            <h3>Experience</h3>
+                            <p>
+                                U.S. Army Service<br>
+                                Military Police Training<br>
+                                Legal Assistant Experience<br>
+                                Distinguished Leadership Award
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="person-links">
+                        <a href="mailto:ZACH_EMAIL_HERE" class="button">Email</a>
+                        <a href="https://www.linkedin.com/in/zachary-denman-938538280/" class="button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 GUNNAR PROFILE
+                 ================================================== -->
+
+            <article id="gunnar" class="person-profile">
+
+                <div class="person-image">
+                    <img
+                        src="images/gunnar.jpg"
+                        alt="Gunnar J. Inderlied"
+                    >
+                </div>
+
+                <div class="person-info">
+
+                    <p class="section-label">
+                        CO-FOUNDER & 50% OWNER
+                    </p>
+
+                    <h2>
+                        Gunnar J. Inderlied
+                    </h2>
+
+                    <p>
+                        Gunnar J. Inderlied is a co-founder and 50% owner-
+                        operator of ZG Real Estate Development. He began
+                        working in excavation at a young age through
+                        projects with his father, who has extensive
+                        experience in the field. These early experiences
+                        helped him develop a strong work ethic and an
+                        understanding of the construction process.
+                    </p>
+
+                    <p>
+                        Gunnar currently works at First Federal Savings
+                        Bank in Huntington as a Commercial Loan Processor
+                        and Treasury Management Assistant. Through his
+                        work in banking, he has developed an understanding
+                        of lending processes, financial controls, cash
+                        management, and financial analysis.
+                    </p>
+
+                    <p>
+                        Gunnar is pursuing a degree in Finance at Purdue
+                        University Fort Wayne's Doermer School of Business.
+                        His experience in construction and banking gives
+                        him a unique perspective on both the practical
+                        and financial sides of real estate development.
+                    </p>
+
+                    <p>
+                        Gunnar first entered the real estate industry
+                        through wholesaling. As he learned more about the
+                        market, he recognized an opportunity to make a
+                        more meaningful and lasting contribution to his
+                        local community through real estate development.
+                        That vision ultimately led to the creation of
+                        ZG Real Estate Development and its mission of
+                        strengthening communities through property
+                        investment.
+                    </p>
+
+
+                    <!-- Gunnar Details -->
+
+                    <div class="person-details">
+
+                        <div class="person-detail-card">
+                            <h3>Education</h3>
+                            <p>
+                                Purdue University Fort Wayne<br>
+                                Finance
+                            </p>
+                        </div>
+
+                        <div class="person-detail-card">
+                            <h3>Experience</h3>
+                            <p>
+                                Excavation & Construction<br>
+                                Commercial Loan Processing<br>
+                                Treasury Management<br>
+                                Real Estate Wholesaling
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="person-links">
+                        <a href="mailto:GUNNAR_EMAIL_HERE" class="button">Email</a>
+                        <a href="https://www.linkedin.com/in/gunnar-inderlied-14171b3b3/" class="button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+   <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <!-- Business Name -->
+            <p>
+                ZG Development
+            </p>
+
+
+            <!-- Footer Navigation -->
+            <div class="footer-links">
+
+                <a href="index.html#home">
+                    Home
+                </a>
+
+                <!--<a href="index.html#projects">
+                    Projects
+                </a>
+
+                <a href="index.html#portfolio">
+                    Portfolio
+                </a>-->
+
+                <a href="index.html#about">
+                    About Us
+                </a>
+
+                <a href="index.html#meet-us">
+                    Meet Us
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Copyright -->
+            <p>
+                &copy; 2026 ZG Development. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ============================================================
+         FOUNDER TOGGLE JAVASCRIPT
+         ============================================================ -->
+
+    <script>
+
+        function showFounder(founder, button) {
+
+            // Hide all founder profiles
+            document
+                .querySelectorAll('.person-profile')
+                .forEach(profile => {
+                    profile.classList.remove('active-founder');
+                });
+
+
+            // Remove active state from all buttons
+            document
+                .querySelectorAll('.founder-tab')
+                .forEach(tab => {
+                    tab.classList.remove('active');
+                });
+
+
+            // Show selected founder
+            document
+                .getElementById(founder)
+                .classList.add('active-founder');
+
+
+            // Highlight selected button
+            button.classList.add('active');
+
+        }
+
+    </script>
+
+</body>
+
+</html>
