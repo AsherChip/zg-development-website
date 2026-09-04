@@ -258,90 +258,93 @@ section p {
 }
 
 /* ============================================================
-   ABOUT SECTION DIVIDER
-   ============================================================ */
-
-.about {
-    margin-top: 50px;
-
-    padding-top: 100px;
-
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-
-/* ============================================================
    ABOUT SECTION
    ============================================================ */
 
 .about {
     width: 100%;
 
-    padding: 120px 40px;
+    margin-top: 10px;
+
+    padding: 110px var(--content-padding) 120px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
 
     background-color: var(--color-background);
 }
 
 
-/* Main About content */
-.about > .section-container {
-    width: 100%;
-    max-width: 1300px;
-
-    margin: 0 auto;
-}
-
-/* ============================================================
-   ABOUT SECTION HEADER
-   ============================================================ */
+/* ---------- About Header ---------- */
 
 .about-header {
-    margin-bottom: 90px;
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 85px;
+
+    text-align: center;
+}
+
+.about-header .section-label {
+    margin: 0;
+
+    color: var(--color-accent);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
 }
 
 
-/* ============================================================
-   ABOUT BUSINESS
-   ============================================================ */
+/* ---------- About Content ---------- */
 
 .about-business {
     display: flex;
     flex-direction: column;
 
-    gap: 80px;
+    gap: 100px;
 
     width: 100%;
 }
 
 
-/* ============================================================
-   ABOUT ROW
-   ============================================================ */
+/* ---------- About Row ---------- */
 
 .about-row {
-    display: grid;
-
-    grid-template-columns: 1.35fr 1.0fr;
-
-    align-items: center;
-
-    gap: 80px;
-
     width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
 }
 
 
-/* ============================================================
-   ABOUT ROW TITLE
-   ============================================================ */
+/* ---------- About Title ---------- */
 
 .about-row-title {
+    width: 100%;
+
+    margin-bottom: 28px;
+
+    padding-left: 20px;
+
     text-align: left;
 }
 
 
 .about-row-title .section-label {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+
+    color: var(--color-accent);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
 }
 
 
@@ -350,45 +353,59 @@ section p {
 
     color: var(--color-primary);
 
-    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-size: clamp(2.3rem, 4vw, 3.6rem);
 
-    line-height: 1.05;
+    font-weight: 600;
+
+    line-height: 1.1;
 
     letter-spacing: -1.5px;
+
+    white-space: nowrap;
 }
 
-/* ============================================================
-   ABOUT DESCRIPTION CARDS
-   ============================================================ */
+
+/* ---------- About Cards ---------- */
 
 .about-card {
     width: 100%;
 
-    min-height: 260px;
+    min-height: 230px;
 
-    padding: 45px;
+    padding: 45px 50px;
 
     display: flex;
     align-items: center;
 
-    border-radius: var(--border-radius-medium);
+    border-radius: 8px;
 
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.20);
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.14),
+        0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 
-.about-card p {
+/* ---------- Mission Card ---------- */
+
+.mission-card {
+    background-color: var(--color-primary);
+
+    color: #FFFFFF;
+}
+
+
+.mission-card p {
     margin: 0;
 
-    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 1.2rem;
 
     line-height: 1.8;
 }
 
 
-/* ============================================================
-   APPROACH CARD
-   ============================================================ */
+/* ---------- Approach Card ---------- */
 
 .approach-card {
     background-color: var(--color-accent);
@@ -398,72 +415,59 @@ section p {
 
 
 .approach-card p {
+    margin: 0;
+
     color: var(--color-primary);
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
 }
 
 
 /* ============================================================
-   SECTION LABEL
+   MOBILE ABOUT
    ============================================================ */
 
-.section-label {
-    margin-bottom: 25px;
+@media (max-width: 768px) {
 
-    color: var(--color-accent);
+    .about {
+        padding: 80px 20px 90px;
+    }
 
-    font-size: 1.5rem;
 
-    font-weight: 700;
+    .about-header {
+        margin-bottom: 60px;
+    }
 
-    letter-spacing: 3px;
 
-    text-transform: uppercase;
+    .about-business {
+        gap: 70px;
+    }
+
+
+    .about-row-title {
+        padding-left: 0;
+
+        margin-bottom: 25px;
+    }
+
+
+    .about-row-title h2 {
+        font-size: 2.3rem;
+
+        white-space: normal;
+    }
+
+
+    .about-card {
+        min-height: 0;
+
+        padding: 35px 30px;
+    }
+
 }
 
-
-/* ============================================================
-   MISSION CARD
-   ============================================================ */
-
-.mission-card {
-    width: 100%;
-    max-width: 1000px;
-
-    padding: 40px;
-
-    background-color: var(--color-primary);
-
-    color: #FFFFFF;
-
-    border-radius: var(--border-radius-medium);
-
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
-}
-
-
-.mission-card .section-label {
-    color: var(--color-accent);
-}
-
-
-.mission-card h3 {
-    margin-bottom: 22px;
-
-    color: #FFFFFF;
-
-    font-size: 2rem;
-
-    line-height: 1.15;
-}
-
-
-.mission-card p:not(.section-label) {
-    color: rgba(255, 255, 255, 0.75);
-
-    font-size: 1rem;
-
-    line-height: 1.75;
-}
 
 
 /* ============================================================
@@ -471,306 +475,156 @@ section p {
    ============================================================ */
 
 .meet-us {
-    margin-top: 130px;
+    width: 100%;
 
-    padding-top: 100px;
+    padding: 120px var(--content-padding);
 
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+    background-color: var(--color-background);
 }
-
 
 /* ---------- Meet Us Header ---------- */
 
 .meet-us-header {
-    max-width: 100%;
-
-    margin: 0 auto 45px;
-
-    text-align: center;
-}
-
-
-.meet-us-header h2 {
-    margin-bottom: 20px;
-
-    color: var(--color-primary);
-
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-
-    line-height: 1.1;
-
-    letter-spacing: -1px;
-
-    white-space: nowrap;
-}
-
-
-.meet-us-header > p:last-child {
-    color: var(--color-secondary);
-
-    font-size: 1.05rem;
-
-    line-height: 1.7;
-}
-
-
-/* ============================================================
-   FOUNDERS
-   ============================================================ */
-
-.founders {
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 70px;
-
+    width: 100%;
     max-width: 1050px;
 
-    margin: 0 auto;
+    margin: 0 auto 85px;
+
+    padding-left: 20px;
+
+    text-align: left;
 }
 
-
-.founder {
-    min-width: 0;
-}
-
-
-/* ============================================================
-   FOUNDER PHOTO
-   ============================================================ */
-
-.founder-image {
-    width: 350px;
-    height: 450px;
-
-    overflow: hidden;
-
-    margin: 0 auto 25px;
-
-    background-color: #DDDDDD;
-
-    border-radius: var(--border-radius-medium);
-
-    box-shadow: var(--nav-shadow);
-}
-
-
-.founder-image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: transform 0.4s ease;
-}
-
-
-.founder-image:hover img {
-    transform: scale(1.03);
-}
-
-
-/* ============================================================
-   FOUNDER INFORMATION
-   ============================================================ */
-
-.founder-info {
-    max-width: 500px;
-
-    margin: 0 auto;
-
-    text-align: center;
-}
-
-
-.founder-info h3 {
-    margin-bottom: 6px;
-
-    color: var(--color-primary);
-
-    font-size: 1.5rem;
-}
-
-
-.founder-title {
-    margin-bottom: 20px;
+.meet-us-header .section-label {
+    margin-bottom: 12px;
 
     color: var(--color-accent);
 
-    font-size: 0.8rem;
-
+    font-size: 0.85rem;
     font-weight: 700;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 2.5px;
 
     text-transform: uppercase;
 }
 
+.meet-us-header h2 {
+    margin: 0;
 
-.founder-info p:not(.founder-title) {
-    margin-bottom: 15px;
+    color: var(--color-primary);
 
-    color: var(--color-secondary);
+    font-size: clamp(2.3rem, 4vw, 3.6rem);
 
-    line-height: 1.7;
-}
+    font-weight: 600;
 
+    line-height: 1.1;
 
-/* ============================================================
-   TABLET
-   ============================================================ */
+    letter-spacing: -1.5px;
 
-@media (max-width: 900px) {
-
-    .about {
-        padding: 90px 30px;
-    }
-
-
-    .about-business {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
-
-    .about-business-text {
-        max-width: 750px;
-
-        margin: 0 auto;
-
-        text-align: center;
-    }
-
-
-    .mission-card {
-        max-width: 600px;
-
-        margin: 0 auto;
-    }
-
-
-    .founders {
-        gap: 40px;
-    }
-
-}
-
-
-/* ============================================================
-   MOBILE
-   ============================================================ */
-
-@media (max-width: 650px) {
-
-    .about {
-        padding: 70px 20px;
-    }
-
-
-    .about-business-text h2 {
-        font-size: 2.7rem;
-    }
-
-
-    .meet-us {
-        margin-top: 90px;
-
-        padding-top: 70px;
-    }
-
-
-    .founders {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
-
-    .founder-image {
-        width: 200px;
-        height: 250px;
-    }
-
+    white-space: nowrap;
 }
 
 /* ============================================================
-   TABLET
+   MEET US / FOUNDERS
    ============================================================ */
 
-@media (max-width: 900px) {
+.founders {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 
-    .about-business {
-        grid-template-columns: 1fr;
+    max-width: 1050px;
+    margin: 0 auto;
+}
 
-        gap: 50px;
-    }
-
-
-    .mission-card {
-        max-width: 700px;
-    }
-
-
-    .founders {
-        gap: 30px;
-    }
-
+.founder {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 45px;
+    align-items: center;
 }
 
 
-/* ============================================================
-   MOBILE
-   ============================================================ */
+/* Founder Information Card */
 
-@media (max-width: 650px) {
+.founder-card {
+    padding: 45px;
 
-    .about {
-        padding: 60px 20px;
-    }
+    background: radial-gradient(
+        circle at 20% 20%,
+        #303030 0%,
+        #252525 70%
+    );
 
+    border-radius: 8px;
 
-    .meet-us {
-        margin-top: 80px;
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, .14),
+        0 4px 10px rgba(0, 0, 0, .06);
+}
 
-        padding-top: 70px;
-    }
+.founder-card .section-label {
+    margin-bottom: 12px;
+    color: var(--color-accent);
+    font-size: .8rem;
+}
 
+.founder-card h3 {
+    margin-bottom: 25px;
 
-    .founders {
-        grid-template-columns: 1fr;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+}
 
-        gap: 60px;
-    }
+.founder-card p:not(.section-label) {
+    margin-bottom: 16px;
 
-
-    .founder-image {
-        aspect-ratio: 4 / 5;
-    }
-
-
-    .founder-info {
-        max-width: none;
-    }
-
+    color: rgba(255, 255, 255, .85);
+    font-size: 1rem;
+    line-height: 1.75;
 }
 
 
-/* ============================================================
-   MOBILE ABOUT SECTION
-   ============================================================ */
+/* Founder Photo */
 
-@media (max-width: 768px) {
+.founder-image {
+    width: 100%;
+    height: 460px;
 
-    .about-content {
-        grid-template-columns: 1fr;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 3px solid var(--color-accent);
+}
 
-        gap: 40px;
-    }
+.founder-image img {
+    width: 100%;
+    height: 100%;
 
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Learn More */
+
+.learn-more {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: var(--color-accent);
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: opacity .2s ease;
+}
+
+.learn-more:hover {
+    opacity: .75;
 }
 
 
