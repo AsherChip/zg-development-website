@@ -34,6 +34,8 @@ a {
     width: 100%;
 }
 
+
+/* Main navigation container */
 .nav-container {
     display: flex;
     align-items: center;
@@ -45,7 +47,7 @@ a {
     width: 100%;
     height: var(--nav-height);
 
-    padding: 0 20px;
+    padding: 0 30px;
 
     background-color: rgba(255, 255, 255, 0.8);
 
@@ -68,18 +70,24 @@ a {
 
     margin-right: auto;
 
-    height: 60px;
-
-    flex-shrink: 0;
+    height: 55px;
 }
 
 .nav-logo img {
     display: block;
 
-    height: 60px;
+    height: 55px;
     width: auto;
 
     object-fit: contain;
+}
+
+.nav-logo {
+    height: 40px;
+}
+
+.nav-logo img {
+    height: 40px;
 }
 
 
