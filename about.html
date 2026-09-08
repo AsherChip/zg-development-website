@@ -324,7 +324,7 @@
 
             <!-- Business Name -->
             <p>
-                ZG Development
+                ZG Real Estate Development
             </p>
 
 
@@ -360,7 +360,7 @@
 
             <!-- Copyright -->
             <p>
-                &copy; 2026 ZG Development. All rights reserved.
+                &copy; 2026 ZG Real Estate Development LLC. All rights reserved.
             </p>
 
         </div>
@@ -371,38 +371,65 @@
          FOUNDER TOGGLE JAVASCRIPT
          ============================================================ -->
 
-    <script>
+         <script>
 
-        function showFounder(founder, button) {
+    function showFounder(founder, button) {
 
-            // Hide all founder profiles
-            document
-                .querySelectorAll('.person-profile')
-                .forEach(profile => {
-                    profile.classList.remove('active-founder');
-                });
-
-
-            // Remove active state from all buttons
-            document
-                .querySelectorAll('.founder-tab')
-                .forEach(tab => {
-                    tab.classList.remove('active');
-                });
+        // Hide all founder profiles
+        document
+            .querySelectorAll('.person-profile')
+            .forEach(profile => {
+                profile.classList.remove('active-founder');
+            });
 
 
-            // Show selected founder
-            document
-                .getElementById(founder)
-                .classList.add('active-founder');
+        // Remove active state from all buttons
+        document
+            .querySelectorAll('.founder-tab')
+            .forEach(tab => {
+                tab.classList.remove('active');
+            });
 
 
-            // Highlight selected button
-            button.classList.add('active');
+        // Show selected founder
+        document
+            .getElementById(founder)
+            .classList.add('active-founder');
+
+
+        // Highlight selected button
+        button.classList.add('active');
+
+    }
+
+
+    // Check which founder was selected from the URL
+    window.addEventListener('DOMContentLoaded', function () {
+
+        const founder = window.location.hash.substring(1);
+
+        if (founder === 'zach' || founder === 'gunnar') {
+
+            const button = document.querySelector(
+                `.founder-tab[onclick*="${founder}"]`
+            );
+
+            if (button) {
+                showFounder(founder, button);
+            }
+
+            // Remove the hash so the page stays at the top
+            history.replaceState(
+                null,
+                '',
+                window.location.pathname
+            );
 
         }
 
-    </script>
+    });
+
+</script>
 
 </body>
 
