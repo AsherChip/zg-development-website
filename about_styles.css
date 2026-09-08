@@ -34,8 +34,6 @@ a {
     width: 100%;
 }
 
-
-/* Main navigation container */
 .nav-container {
     display: flex;
     align-items: center;
@@ -70,24 +68,16 @@ a {
 
     margin-right: auto;
 
-    height: 55px;
+    height: 80px;
 }
 
 .nav-logo img {
     display: block;
 
-    height: 55px;
+    height: 80px;
     width: auto;
 
     object-fit: contain;
-}
-
-.nav-logo {
-    height: 40px;
-}
-
-.nav-logo img {
-    height: 40px;
 }
 
 
@@ -99,24 +89,16 @@ a {
     display: flex;
     align-items: center;
 
-    gap: 2px;
-
-    flex-shrink: 0;
+    gap: 10px;
 }
 
 .nav-item {
-    display: block;
-
-    padding: 8px 10px;
+    padding: var(--nav-item-padding);
 
     color: var(--color-nav-text);
 
     border: var(--nav-border-width) solid transparent;
     border-radius: var(--border-radius);
-
-    white-space: nowrap;
-
-    font-size: 0.9rem;
 
     transition:
         color 0.2s ease,
@@ -129,20 +111,24 @@ a {
     border-color: var(--color-accent);
 }
 
+
 /* ============================================================
    BACK BUTTON
    ============================================================ */
 
 .back-button-container {
     position: fixed;
+
     top: 100px;
     left: 25px;
+
     z-index: 999;
 }
 
 .back-button {
     display: inline-flex;
     align-items: center;
+
     gap: 8px;
 
     padding: 10px 15px;
@@ -172,9 +158,12 @@ a {
 
 .back-button:hover {
     color: var(--color-accent);
+
     transform: translateX(-3px);
+
     background-color: rgba(255, 255, 255, 0.95);
 }
+
 
 /* ============================================================
    PEOPLE HEADER
@@ -182,7 +171,7 @@ a {
 
 .people-header {
     padding-top: 180px;
-    padding-bottom: 80px;
+    padding-bottom: 0;
 
     text-align: center;
 
@@ -190,14 +179,14 @@ a {
 }
 
 .people-header .section-label {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
     color: var(--color-accent);
 
     font-size: 0.85rem;
     font-weight: 700;
 
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
 }
 
 .people-header h1 {
@@ -205,10 +194,11 @@ a {
 
     color: var(--color-primary);
 
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.3rem, 4vw, 3.6rem);
     font-weight: 600;
 
-    letter-spacing: -2px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
 }
 
 .people-intro {
@@ -292,7 +282,7 @@ a {
 
     margin: 0 auto;
 
-    padding-bottom: 120px;
+    padding-bottom: 60px;
 }
 
 .person-profile.active-founder {
@@ -346,21 +336,22 @@ a {
 
     color: var(--color-accent);
 
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 700;
 
     letter-spacing: 2.5px;
 }
 
 .person-info h2 {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     color: var(--color-primary);
 
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.3rem, 4vw, 3.6rem);
 
     font-weight: 600;
 
+    line-height: 1.1;
     letter-spacing: -1.5px;
 }
 
@@ -369,9 +360,9 @@ a {
 
     color: var(--color-secondary);
 
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 
@@ -384,37 +375,15 @@ a {
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 30px;
-
-    margin-top: 40px;
-
-    clear: both;
-}
-
-.person-details h3 {
-    margin-bottom: 10px;
-
-    color: var(--color-primary);
-
-    font-size: 1rem;
-}
-
-.person-details p {
-    color: var(--color-secondary);
-
-    line-height: 1.6;
-}
-
-/* Person Cards */
-
-.person-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
 
     margin-top: 50px;
+
     clear: both;
 }
+
+
+/* Person Detail Cards */
 
 .person-detail-card {
     padding: 28px;
@@ -422,9 +391,11 @@ a {
     background-color: #ffffff;
 
     border: 1px solid rgba(0, 0, 0, 0.1);
+
     border-radius: 6px;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .person-detail-card h3 {
@@ -432,15 +403,19 @@ a {
 
     color: var(--color-accent);
 
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 700;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
 .person-detail-card p {
     color: var(--color-secondary);
-    font-size: 0.95rem;
+
+    font-size: 1rem;
+
     line-height: 1.7;
 }
 
@@ -451,24 +426,32 @@ a {
 
 .person-links {
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     margin-top: 50px;
+
     clear: both;
 }
 
 .person-links .button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
     min-width: 150px;
+
     padding: 14px 28px;
 
     background-color: var(--color-primary);
+
     color: #ffffff;
 
     border: 1px solid var(--color-primary);
+
     border-radius: 5px;
 
     font-size: 1rem;
@@ -483,8 +466,11 @@ a {
 
 .person-links .button:hover {
     background-color: var(--color-accent);
+
     border-color: var(--color-accent);
+
     color: var(--color-primary);
+
     transform: translateY(-2px);
 }
 
@@ -507,6 +493,7 @@ footer {
 
 .footer-container {
     width: 100%;
+
     max-width: var(--content-width);
 
     margin: 0 auto;
@@ -528,65 +515,135 @@ footer {
 
 
 /* ============================================================
-   MOBILE
+   MOBILE / PHONE SCREENS
    ============================================================ */
 
 @media (max-width: 768px) {
 
-    .nav-container {
-        padding: 0 15px;
+
+    /* --------------------------------------------------------
+       GENERAL
+       -------------------------------------------------------- */
+
+    body {
+        width: 100%;
     }
 
-    .nav-logo {
-        height: 50px;
+
+    /* --------------------------------------------------------
+    NAVIGATION
+    -------------------------------------------------------- */
+
+    .nav {
+        display: none;
     }
 
-    .nav-logo img {
-        height: 50px;
+    /* --------------------------------------------------------
+       BACK BUTTON
+       -------------------------------------------------------- */
+
+    .back-button-container {
+        top: 10px;
+        left: 15px;
     }
 
-    .nav-links {
-        gap: 0;
+    .back-button {
+        padding: 15px 30px;
+
+        font-size: 0.85rem;
     }
 
-    .nav-item {
-        padding: 7px 6px;
-        font-size: 0.8rem;
-    }
 
+    /* --------------------------------------------------------
+       PEOPLE HEADER
+       -------------------------------------------------------- */
 
     .people-header {
-        padding-top: 150px;
-        padding-bottom: 60px;
+        padding: 100px 20px 0px;
+    }
+
+    .people-header .section-label {
+        margin-bottom: 12px;
+
+        font-size: 0.85rem;
+
+        letter-spacing: 2.5px;
     }
 
     .people-header h1 {
-        font-size: 3rem;
+        margin-bottom: 20px;
+
+        font-size: 2.3rem;
+
+        line-height: 1.1;
+
+        letter-spacing: -1px;
     }
 
+    .people-intro {
+        width: 100%;
+        max-width: 650px;
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* --------------------------------------------------------
+       FOUNDER SECTION
+       -------------------------------------------------------- */
+
+    .founder-section {
+        padding: 40px 20px 90px;
+    }
+
+
+    /* --------------------------------------------------------
+       FOUNDER SELECTOR
+       -------------------------------------------------------- */
 
     .founder-selector {
         flex-direction: column;
 
         align-items: stretch;
 
+        width: 100%;
         max-width: 350px;
 
         margin-left: auto;
         margin-right: auto;
 
         margin-bottom: 60px;
+
+        gap: 8px;
     }
 
     .founder-tab {
+        width: 100%;
+
+        padding: 12px 18px;
+
+        font-size: 0.9rem;
+
         text-align: center;
     }
 
 
+    /* --------------------------------------------------------
+       PERSON PROFILE
+       -------------------------------------------------------- */
+
     .person-profile {
-        padding-bottom: 80px;
+        width: 100%;
+
+        padding-bottom: 30px;
     }
 
+
+    /* --------------------------------------------------------
+       PERSON IMAGE
+       -------------------------------------------------------- */
 
     .person-image {
         float: none;
@@ -595,15 +652,109 @@ footer {
         height: 280px;
 
         margin: 0 auto 40px;
+
+        border-width: 6px;
     }
 
+
+    /* --------------------------------------------------------
+       PERSON INFORMATION
+       -------------------------------------------------------- */
+
+    .person-info {
+        width: 100%;
+    }
+
+    .person-info .section-label {
+        margin-bottom: 12px;
+
+        font-size: 0.85rem;
+
+        letter-spacing: 2.5px;
+    }
+
+    .person-info h2 {
+        margin-bottom: 20px;
+
+        font-size: 2.3rem;
+
+        line-height: 1.1;
+
+        letter-spacing: -1px;
+    }
+
+    .person-info > p:not(.section-label) {
+        margin-bottom: 18px;
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* --------------------------------------------------------
+       PERSON DETAILS
+       -------------------------------------------------------- */
 
     .person-details {
         grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 40px;
+    }
+
+    .person-detail-card {
+        padding: 25px 22px;
+    }
+
+    .person-detail-card h3 {
+        margin-bottom: 12px;
+
+        font-size: 0.85rem;
+    }
+
+    .person-detail-card p {
+        font-size: 1rem;
+
+        line-height: 1.7;
     }
 
 
+    /* --------------------------------------------------------
+       PERSON LINKS
+       -------------------------------------------------------- */
+
     .person-links {
         flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin-top: 40px;
+    }
+
+    .person-links .button {
+        min-width: 145px;
+
+        padding: 13px 22px;
+
+        font-size: 0.95rem;
+    }
+
+
+    /* --------------------------------------------------------
+       FOOTER
+       -------------------------------------------------------- */
+
+    footer {
+        padding: 35px 20px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+
+        gap: 12px 20px;
+
+        margin: 20px 0;
     }
 }
