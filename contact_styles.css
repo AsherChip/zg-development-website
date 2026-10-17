@@ -1,3 +1,11 @@
+/*
+ZG Real Estate Development Website
+Contact Page Styles
+
+Global variables are stored in variables.css.
+*/
+
+
 /* ============================================================
    INITIALIZING STYLES
    ============================================================ */
@@ -8,13 +16,23 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     width: 100%;
     min-height: 100%;
 }
 
+/* Column layout keeps the footer at the bottom of short pages */
 body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
     font-family: var(--font-main);
     background-color: var(--color-background);
     color: var(--color-text);
@@ -34,8 +52,6 @@ a {
     width: 100%;
 }
 
-
-/* Main navigation container */
 .nav-container {
     display: flex;
     align-items: center;
@@ -59,11 +75,6 @@ a {
     z-index: 1000;
 }
 
-
-/* ============================================================
-   NAVIGATION LOGO
-   ============================================================ */
-
 .nav-logo {
     display: flex;
     align-items: center;
@@ -82,11 +93,6 @@ a {
     object-fit: contain;
 }
 
-
-/* ============================================================
-   NAVIGATION LINKS
-   ============================================================ */
-
 .nav-links {
     display: flex;
     align-items: center;
@@ -94,8 +100,6 @@ a {
     gap: 10px;
 }
 
-
-/* Individual navigation item */
 .nav-item {
     padding: var(--nav-item-padding);
 
@@ -110,8 +114,6 @@ a {
         border-color 0.2s ease;
 }
 
-
-/* Navigation item when the mouse is hovering over it */
 .nav-item:hover {
     color: var(--color-nav-hover);
     border-color: var(--color-accent);
@@ -172,243 +174,172 @@ a {
 
 
 /* ============================================================
-   CONTACT HEADER
+   MAIN CONTENT
    ============================================================ */
 
-.contact-header {
-    padding-top: 170px;
-    padding-bottom: 90px;
+/* main is a flex container so .contact-page can fill it and
+   truly center the card (percentage heights don't work in flex) */
+main {
+    flex: 1;
 
-    text-align: center;
+    display: flex;
 
-    background-color: var(--color-background);
-}
-
-.contact-header .section-label {
-    margin-bottom: 12px;
-
-    color: var(--color-accent);
-
-    font-size: 0.85rem;
-    font-weight: 700;
-
-    letter-spacing: 2.5px;
-}
-
-.contact-header h1 {
-    margin-bottom: 25px;
-
-    color: var(--color-primary);
-
-    font-size: clamp(2.3rem, 4vw, 3.6rem);
-    font-weight: 600;
-
-    line-height: 1.1;
-    letter-spacing: -1.5px;
-}
-
-.contact-intro {
-    max-width: 700px;
-
-    margin: 0 auto;
-
-    color: var(--color-secondary);
-
-    font-size: 1.1rem;
-    line-height: 1.7;
+    width: 100%;
 }
 
 
 /* ============================================================
-   NEXT STEPS
+   CONTACT PAGE
    ============================================================ */
 
-.next-steps {
-    padding: 100px var(--content-padding) 120px;
+.contact-page {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
 
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    flex: 1;
 
-    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: calc(var(--nav-height) + 60px) var(--content-padding) 80px;
 }
 
-.next-steps-header {
-    max-width: 1050px;
+/* Soft accent glows + faint grid fill the empty background space */
+.contact-page::before {
+    content: "";
 
-    margin: 0 auto 55px;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
 
-    padding-left: 20px;
-}
+    background:
+        radial-gradient(
+            ellipse 55% 45% at 12% 18%,
+            color-mix(in srgb, var(--color-accent) 16%, transparent),
+            transparent 70%
+        ),
+        radial-gradient(
+            ellipse 50% 50% at 90% 88%,
+            color-mix(in srgb, var(--color-accent) 12%, transparent),
+            transparent 70%
+        ),
+        linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
 
-.next-steps-header .section-label {
-    margin-bottom: 12px;
+    background-size:
+        auto,
+        auto,
+        56px 56px,
+        56px 56px;
 
-    color: var(--color-accent);
-
-    font-size: 0.85rem;
-    font-weight: 700;
-
-    letter-spacing: 2.5px;
-}
-
-.next-steps-header h2 {
-    color: var(--color-primary);
-
-    font-size: clamp(2.3rem, 4vw, 3.6rem);
-    font-weight: 600;
-
-    line-height: 1.1;
-    letter-spacing: -1.5px;
-}
-
-
-/* ============================================================
-   STEP CARDS
-   ============================================================ */
-
-.steps-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-
-    max-width: 1050px;
-
-    margin: 0 auto;
-}
-
-.step-card {
-    padding: 35px;
-
-    background-color: #ffffff;
-
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.05);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.step-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 14px 28px rgba(0, 0, 0, 0.08);
-}
-
-.step-number {
-    display: block;
-
-    margin-bottom: 25px;
-
-    color: var(--color-accent);
-
-    font-size: 0.8rem;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-.step-card h3 {
-    margin-bottom: 15px;
-
-    color: var(--color-primary);
-
-    font-size: 1.35rem;
-    font-weight: 600;
-}
-
-.step-card p {
-    color: var(--color-secondary);
-
-    font-size: 1rem;
-    line-height: 1.7;
+    /* fades the grid out toward the edges */
+    -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, #000 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, #000 40%, transparent 100%);
 }
 
 
-/* ============================================================
-   CONTACT ACTION
-   ============================================================ */
+/* ---------- Contact Card ---------- */
 
-.contact-action {
-    padding: 0 var(--content-padding) 120px;
+.contact-card {
+    position: relative;
+    overflow: hidden;
 
-    background-color: var(--color-background);
-}
+    /* max-width stops the card stretching across ultrawide screens */
+    width: 100%;
+    max-width: 1100px;
 
-.contact-action-card {
-    max-width: 1050px;
-
-    margin: 0 auto;
-
-    padding: 60px;
+    padding: 70px 80px;
 
     text-align: center;
 
     background:
         radial-gradient(
+            circle at 15% 0%,
+            color-mix(in srgb, var(--color-accent) 14%, transparent) 0%,
+            transparent 55%
+        ),
+        radial-gradient(
             circle at 20% 20%,
-            #303030 0%,
-            #252525 70%
+            #323232 0%,
+            #202020 75%
         );
 
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
 
     box-shadow:
-        0 18px 35px rgba(0, 0, 0, 0.14),
-        0 4px 10px rgba(0, 0, 0, 0.06);
+        0 30px 60px rgba(0, 0, 0, 0.22),
+        0 8px 18px rgba(0, 0, 0, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.contact-action-card .section-label {
-    margin-bottom: 12px;
+/* Accent bar across the top of the card */
+.contact-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 140px;
+    height: 4px;
+
+    transform: translateX(-50%);
+
+    background: var(--color-accent);
+    border-radius: 0 0 6px 6px;
+}
+
+/* Keep card content above any decorative layers */
+.contact-card > * {
+    position: relative;
+}
+
+.contact-card .section-label {
+    margin-bottom: 18px;
 
     color: var(--color-accent);
 
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
+    text-transform: uppercase;
 
-    letter-spacing: 2.5px;
+    letter-spacing: 3.5px;
 }
 
-.contact-action-card h2 {
-    margin-bottom: 20px;
+.contact-card h1 {
+    margin-bottom: 26px;
 
     color: #ffffff;
 
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.6rem, 4vw, 4.4rem);
     font-weight: 600;
 
-    line-height: 1.1;
+    line-height: 1.08;
+    letter-spacing: -2px;
 }
 
-.contact-action-card > p:not(.section-label) {
-    max-width: 650px;
+.contact-intro {
+    max-width: 640px;
 
     margin: 0 auto;
 
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.78);
 
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 1.75;
 }
 
 
-/* ============================================================
-   CONTACT BUTTONS
-   ============================================================ */
+/* ---------- Email Button ---------- */
 
 .contact-buttons {
     display: flex;
-
     justify-content: center;
 
-    gap: 15px;
-
-    margin-top: 35px;
+    margin-top: 48px;
 }
 
 .contact-buttons .button {
@@ -416,28 +347,91 @@ a {
     align-items: center;
     justify-content: center;
 
-    min-width: 150px;
+    min-width: 240px;
 
-    padding: 14px 28px;
+    padding: 18px 44px;
 
     background-color: var(--color-accent);
     color: var(--color-primary);
 
     border: 2px solid var(--color-accent);
-    border-radius: 5px;
+    border-radius: 8px;
 
-    font-size: 1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--color-accent) 30%, transparent);
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact-buttons .button:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 30px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+
+/* ---------- LinkedIn Links ---------- */
+
+.contact-linkedin {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 14px 18px;
+
+    margin-top: 32px;
+}
+
+.contact-linkedin a {
+    padding: 11px 26px;
+
+    color: var(--color-accent);
+
+    border: 1px solid color-mix(in srgb, var(--color-accent) 60%, transparent);
+    border-radius: 999px;   /* makes it a pill */
+
+    font-size: 0.95rem;
     font-weight: 600;
 
     transition:
         background-color 0.2s ease,
         color 0.2s ease,
+        border-color 0.2s ease,
         transform 0.2s ease;
 }
 
-.contact-buttons .button:hover {
-    background-color: var(--color-primary);
-    color: var(--color-accent);
+.contact-linkedin a:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-primary);
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Location ---------- */
+
+.contact-location {
+    margin-top: 50px;
+    padding-top: 28px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 
@@ -467,7 +461,6 @@ footer {
 
 .footer-links {
     display: flex;
-
     justify-content: center;
 
     gap: 20px;
@@ -481,33 +474,55 @@ footer {
 
 
 /* ============================================================
+   LARGE / ULTRAWIDE SCREENS (1440p and up)
+   ============================================================ */
+
+@media (min-width: 1800px) {
+
+    .contact-card {
+        max-width: 1280px;
+
+        padding: 90px 110px;
+    }
+
+    .contact-card .section-label {
+        font-size: 1rem;
+    }
+
+    .contact-card h1 {
+        font-size: 5rem;
+    }
+
+    .contact-intro {
+        max-width: 760px;
+
+        font-size: 1.3rem;
+    }
+
+    .contact-buttons .button {
+        min-width: 280px;
+
+        padding: 20px 52px;
+
+        font-size: 1.15rem;
+    }
+
+    .contact-linkedin a {
+        font-size: 1.05rem;
+    }
+}
+
+
+/* ============================================================
    MOBILE / PHONE SCREENS
    ============================================================ */
 
 @media (max-width: 768px) {
 
-
-    /* --------------------------------------------------------
-       GENERAL
-       -------------------------------------------------------- */
-
-    body {
-        width: 100%;
-    }
-
-
-    /* --------------------------------------------------------
-       NAVIGATION
-       -------------------------------------------------------- */
-
+    /* Nav is hidden on phones (the back button replaces it) */
     .nav {
         display: none;
     }
-
-
-    /* --------------------------------------------------------
-       BACK BUTTON
-       -------------------------------------------------------- */
 
     .back-button-container {
         top: 10px;
@@ -520,170 +535,46 @@ footer {
         font-size: 0.85rem;
     }
 
+    .contact-page {
+        align-items: flex-start;
 
-    /* --------------------------------------------------------
-       CONTACT HEADER
-       -------------------------------------------------------- */
-
-    .contact-header {
-        padding: 100px 20px 60px;
+        padding: 90px 20px 60px;
     }
 
-    .contact-header .section-label {
-        margin-bottom: 12px;
+    .contact-card {
+        width: 100%;
 
-        font-size: 0.85rem;
-
-        letter-spacing: 2.5px;
+        padding: 50px 25px;
     }
 
-    .contact-header h1 {
-        margin-bottom: 20px;
-
+    .contact-card h1 {
         font-size: 2.3rem;
-
-        line-height: 1.1;
 
         letter-spacing: -1px;
     }
 
     .contact-intro {
-        width: 100%;
-        max-width: 700px;
-
         font-size: 1rem;
-
-        line-height: 1.7;
     }
-
-
-    /* --------------------------------------------------------
-       NEXT STEPS
-       -------------------------------------------------------- */
-
-    .next-steps {
-        padding: 70px 20px 90px;
-    }
-
-    .next-steps-header {
-        padding-left: 0;
-
-        margin-bottom: 45px;
-    }
-
-    .next-steps-header .section-label {
-        margin-bottom: 12px;
-
-        font-size: 0.85rem;
-
-        letter-spacing: 2.5px;
-    }
-
-    .next-steps-header h2 {
-        font-size: 2.3rem;
-
-        line-height: 1.1;
-
-        letter-spacing: -1px;
-    }
-
-
-    /* --------------------------------------------------------
-       STEP CARDS
-       -------------------------------------------------------- */
-
-    .steps-grid {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-    }
-
-    .step-card {
-        padding: 25px 22px;
-    }
-
-    .step-number {
-        margin-bottom: 20px;
-
-        font-size: 0.8rem;
-    }
-
-    .step-card h3 {
-        margin-bottom: 12px;
-
-        font-size: 1.2rem;
-    }
-
-    .step-card p {
-        font-size: 1rem;
-
-        line-height: 1.7;
-    }
-
-
-    /* --------------------------------------------------------
-       CONTACT ACTION
-       -------------------------------------------------------- */
-
-    .contact-action {
-        padding: 0 20px 90px;
-    }
-
-    .contact-action-card {
-        padding: 45px 25px;
-    }
-
-    .contact-action-card .section-label {
-        margin-bottom: 12px;
-
-        font-size: 0.85rem;
-
-        letter-spacing: 2.5px;
-    }
-
-    .contact-action-card h2 {
-        margin-bottom: 18px;
-
-        font-size: 2rem;
-
-        line-height: 1.1;
-    }
-
-    .contact-action-card > p:not(.section-label) {
-        font-size: 1rem;
-
-        line-height: 1.7;
-    }
-
-
-    /* --------------------------------------------------------
-       CONTACT BUTTONS
-       -------------------------------------------------------- */
 
     .contact-buttons {
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 10px;
-
         margin-top: 30px;
     }
 
     .contact-buttons .button {
         width: 100%;
-
         min-width: 0;
-
-        padding: 14px 22px;
-
-        font-size: 1rem;
     }
 
+    .contact-linkedin {
+        flex-direction: column;
 
-    /* --------------------------------------------------------
-       FOOTER
-       -------------------------------------------------------- */
+        gap: 12px;
+    }
+
+    .contact-location {
+        margin-top: 36px;
+    }
 
     footer {
         padding: 35px 20px;
@@ -693,7 +584,5 @@ footer {
         flex-wrap: wrap;
 
         gap: 12px 20px;
-
-        margin: 20px 0;
     }
 }
