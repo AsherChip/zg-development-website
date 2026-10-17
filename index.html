@@ -5,28 +5,26 @@
 ======================================================================
 ZG REAL ESTATE DEVELOPMENT WEBSITE
 Home Page
-
-This is the main landing page for the ZG Development website.
 ======================================================================
 -->
 
 <head>
 
-    <!-- ============================================================
-         PAGE INFORMATION
-         ============================================================ -->
-
     <meta charset="utf-8">
-
-    <!-- Makes the website responsive on phones/tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZG Real Estate Development LLC</title>
+
+    <!-- Shows under your link in Google results -->
+    <meta name="description"
+          content="ZG Real Estate Development builds attractive, energy-conscious, attainable single-family homes in Huntington, Indiana.">
+
+    <!-- Favicon (swap for a dedicated square icon when you have one) -->
+    <link rel="icon" href="images/zg_logo_small.jpg">
 
     <!-- Website styles -->
     <link href="variables.css" rel="stylesheet">
     <link href="index_styles.css" rel="stylesheet">
-
-    <!-- Browser title -->
-    <title>ZG Real Estate Development LLC</title>
 
 
     <!-- ============================================================
@@ -34,24 +32,16 @@ This is the main landing page for the ZG Development website.
          ============================================================ -->
 
     <meta property="og:type" content="website">
-
     <meta property="og:url" content="https://zgre-development.com/">
-
     <meta property="og:title" content="ZG Real Estate Development LLC">
-
     <meta property="og:description"
           content="Building Affordable Homes. Revitalizing Huntington.">
-
     <meta property="og:image"
-          content="https://asherchip.github.io/zg-development-website/images/logo.png">
-
+          content="https://zgre-development.com/images/logo.png">
     <meta property="og:image:secure_url"
-          content="https://asherchip.github.io/zg-development-website/images/logo.png">
-
+          content="https://zgre-development.com/images/logo.png">
     <meta property="og:image:type" content="image/png">
-
-    <meta property="og:image:alt"
-          content="ZG Development logo">
+    <meta property="og:image:alt" content="ZG Development logo">
 
 
     <!-- ============================================================
@@ -59,15 +49,11 @@ This is the main landing page for the ZG Development website.
          ============================================================ -->
 
     <meta name="twitter:card" content="summary">
-
-    <meta name="twitter:title"
-          content="ZG Real Estate Development LLC">
-
+    <meta name="twitter:title" content="ZG Real Estate Development LLC">
     <meta name="twitter:description"
           content="Building Affordable Homes. Revitalizing Huntington.">
-
     <meta name="twitter:image"
-          content="https://asherchip.github.io/zg-development-website/images/logo.png">
+          content="https://zgre-development.com/images/logo.png">
 
 </head>
 
@@ -83,49 +69,19 @@ This is the main landing page for the ZG Development website.
 
         <div class="nav-container">
 
-  
-            <!-- Business Logo / Name -->
             <a class="nav-logo" href="#home">
-                <img
-                    src="images/zg_logo_small.jpg"
-                    alt="ZG Development Logo"
-                >
+                <img src="images/zg_logo_small.jpg" alt="ZG Development Logo">
             </a>
 
-            </a>
-
-            <!-- Navigation Links -->
             <div class="nav-links">
 
-                <div class="nav-links">
+                <a class="nav-item" href="#home">Home</a>
+                <a class="nav-item" href="#about">About Us</a>
+                <a class="nav-item" href="#meet-us">Meet Us</a>
 
-                    <a class="nav-item" href="#home">
-                        Home
-                    </a>
+                <!-- Projects / Portfolio links go here when those sections are ready -->
 
-                    <a class="nav-item" href="#about">
-                        About Us
-                    </a>
-
-                    <a class="nav-item" href="#meet-us">
-                        Meet Us
-                    </a>
-
-                    <!--
-                    <a class="nav-item" href="#projects">
-                        Projects
-                    </a>
-
-                    <a class="nav-item" href="#portfolio">
-                        Portfolio
-                    </a>
-                    -->
-
-                    <a class="nav-item" href="#contact">
-                        Contact
-                    </a>
-
-                </div>
+                <a class="nav-item" href="#contact">Contact</a>
 
             </div>
 
@@ -134,354 +90,206 @@ This is the main landing page for the ZG Development website.
     </nav>
 
 
-
-    <!-- ============================================================
-         MAIN CONTENT
-         ============================================================ -->
-
     <main>
 
-<!-- ========================================================
-     HERO / HOME SECTION
-     ======================================================== -->
+        <!-- ========================================================
+             HERO / HOME SECTION
+             ======================================================== -->
 
-<section id="home" class="hero">
+        <section id="home" class="hero">
 
-    <div class="hero-card">
+            <div class="hero-card">
 
-        <img
-            src="images/zg_logo.png"
-            alt="ZG Real Estate Development"
-            class="hero-logo"
-        >
-        <div class="hero-buttons">
+                <img
+                    src="images/zg_logo.png"
+                    alt="ZG Real Estate Development"
+                    class="hero-logo"
+                >
 
-            <a href="#about" class="button">
-                Learn about us
-            </a>
+                <h1 class="hero-tagline">
+                    Building Affordable Homes. Revitalizing Huntington.
+                </h1>
 
-            <a href="#contact" class="button">
-                Contact Us
-            </a>
+                <div class="hero-buttons">
 
-        </div>
+                    <a href="invest.html" class="button">
+                        Interested in Investing
+                    </a>
 
-    </div>
-    
+                    <a href="sell.html" class="button">
+                        Looking to Sell
+                    </a>
 
-</section>
-
-<section id="about" class="about">
-
-    <div class="section-container">
-
-        <!-- =================================================
-             ABOUT SECTION TITLE
-             ================================================= -->
-
-        <div class="about-header">
-
-            <p class="section-label">
-                ABOUT ZG DEVELOPMENT
-            </p>
-
-        </div>
-
-
-<!-- =================================================
-     ABOUT THE BUSINESS
-     ================================================= -->
-
-<div class="about-business">
-
-    <!-- =================================================
-         OUR MISSION
-         ================================================= -->
-
-    <div class="about-row">
-
-        <div class="about-row-title">
-
-            <p class="section-label">
-                OUR MISSION
-            </p>
-
-            <h2>
-                Creating Homes with<br>
-                Purpose.
-            </h2>
-
-        </div>
-
-        <div class="about-card mission-card">
-
-            <p>
-                ZG Real Estate Development LLC aims to develop
-                attractive, energy-conscious, attainable single-family
-                homes in Huntington, Indiana while returning distressed
-                and underutilized land to productive use and
-                strengthening the neighborhoods in which it operates.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- =================================================
-         OUR APPROACH
-         ================================================= -->
-
-    <div class="about-row">
-
-        <div class="about-row-title">
-
-            <p class="section-label">
-                OUR APPROACH
-            </p>
-
-            <h2>
-                Thoughtful Development.<br>
-                Lasting Value.
-            </h2>
-
-        </div>
-
-        <div class="about-card approach-card">
-
-            <p>
-                Our approach focuses on practical design, quality
-                construction, energy-conscious decisions, and
-                creating homes that people are proud to call their own.
-                We believe thoughtful development can bring new life
-                to underutilized land and strengthen the communities
-                we serve.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-
- </div>
-
-</section>
-
-
-<!-- ========================================================
-     MEET US SECTION
-     ======================================================== -->
-
-<section id="meet-us" class="meet-us">
-
-    <div class="section-container">
-
-        <div class="meet-us-header">
-
-            <p class="section-label">
-                MEET US
-            </p>
-
-            <h2>
-                The People Behind ZG Development
-            </h2>
-
-        </div>
-
-
-        <!-- =================================================
-             FOUNDER CARDS
-             ================================================= -->
-
-        <div class="founders">
-
-            <!-- Zach -->
-
-            <article class="founder">
-
-                <div class="founder-info founder-card">
-
-                    <p class="section-label">
-                        CO-FOUNDER
-                    </p>
-
-                    <h3>
-                        Zach Denman
-                    </h3>
-
-                    <p>
-                        Zach is a co-founder of ZG Development and plays
-                        an important role in shaping the company's vision
-                        and direction.
-                    </p>
-
-                    <p>
-                        With a focus on thoughtful development and
-                        long-term value, Zach is committed to helping
-                        create homes that benefit both residents and
-                        the surrounding community.
-                    </p>
-
-                    <a href="about.html#zach" class="learn-more">
-                        Learn More →
+                    <a href="contact.html" class="button">
+                        Contact Us
                     </a>
 
                 </div>
 
-                <div class="founder-image">
+            </div>
 
-                    <img
-                        src="images/zach.png"
-                        alt="Zach - Co-Founder of ZG Development"
-                    >
+            <a href="#about" class="scroll-indicator">
+                <span class="scroll-text">Scroll to learn more about us</span>
+                <span class="scroll-arrow" aria-hidden="true">&#8595;</span>
+            </a>
 
-                </div>
-
-            </article>
-
-
-            <!-- Gunnar -->
-
-            <article class="founder">
-
-                <div class="founder-info founder-card">
-
-                    <p class="section-label">
-                        CO-FOUNDER
-                    </p>
-
-                    <h3>
-                        Gunnar Inderlied
-                    </h3>
-
-                    <p>
-                        Gunnar is a co-founder of ZG Development who
-                        helps guide the company's growth and development.
-                    </p>
-
-                    <p>
-                        His focus on quality, planning, and
-                        community-minded development helps bring the
-                        company's goals from concept to reality.
-                    </p>
-
-                    <a href="about.html#gunnar" class="learn-more">
-                        Learn More →
-                    </a>
-
-                </div>
-
-                <div class="founder-image">
-
-                    <img
-                        src="images/gunnar.jpg"
-                        alt="Gunnar - Co-Founder of ZG Development"
-                    >
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
         <!-- ========================================================
-             PROJECTS SECTION
+             ABOUT SECTION
              ======================================================== -->
-<!--
-        <section id="projects" class="projects">
+
+        <section id="about" class="about">
 
             <div class="section-container">
 
-                <h2>
-                    Our Projects
-                </h2>
+                <div class="about-header">
+                    <p class="section-label">ABOUT ZG DEVELOPMENT</p>
+                </div>
 
-                <p>
-                    Add a short description of the company's projects here.
-                </p>
--->
+                <div class="about-business">
 
-                <!-- Project Cards -->
-<!--
-                <div class="project-grid">
+                    <!-- Our Mission -->
+                    <div class="about-row">
 
--->
-                    <!-- Project 1 -->
-<!--                
-                    <article class="project-card">
+                        <div class="about-row-title">
+                            <p class="section-label">OUR MISSION</p>
+                            <h2>
+                                Creating Homes with<br>
+                                Purpose.
+                            </h2>
+                        </div>
 
-                        <img
-                            src="images/project-1.jpg"
-                            alt="Project 1"
-                        >
+                        <div class="about-card mission-card">
+                            <p>
+                                ZG Real Estate Development LLC aims to develop
+                                attractive, energy-conscious, attainable single-family
+                                homes in Huntington, Indiana while returning distressed
+                                and underutilized land to productive use and
+                                strengthening the neighborhoods in which it operates.
+                            </p>
+                        </div>
 
-                        <h3>
-                            Project Name
-                        </h3>
+                    </div>
 
-                        <p>
-                            Short description of the project.
-                        </p>
+                    <!-- Our Approach -->
+                    <div class="about-row">
 
-                        <a href="#">
-                            View Project
-                        </a>
+                        <div class="about-row-title">
+                            <p class="section-label">OUR APPROACH</p>
+                            <h2>
+                                Thoughtful Development.<br>
+                                Lasting Value.
+                            </h2>
+                        </div>
+
+                        <div class="about-card approach-card">
+                            <p>
+                                Our approach focuses on practical design, quality
+                                construction, energy-conscious decisions, and
+                                creating homes that people are proud to call their own.
+                                We believe thoughtful development can bring new life
+                                to underutilized land and strengthen the communities
+                                we serve.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================================
+             MEET US SECTION
+             ======================================================== -->
+
+        <section id="meet-us" class="meet-us">
+
+            <div class="section-container">
+
+                <div class="meet-us-header">
+                    <p class="section-label">MEET US</p>
+                    <h2>The People Behind ZG Development</h2>
+                </div>
+
+                <div class="founders">
+
+                    <!-- Zach -->
+                    <article class="founder">
+
+                        <div class="founder-info founder-card">
+
+                            <p class="section-label">CO-FOUNDER</p>
+
+                            <h3>Zach Denman</h3>
+
+                            <p>
+                                Zach is a co-founder of ZG Development and plays
+                                an important role in shaping the company's vision
+                                and direction.
+                            </p>
+
+                            <p>
+                                With a focus on thoughtful development and
+                                long-term value, Zach is committed to helping
+                                create homes that benefit both residents and
+                                the surrounding community.
+                            </p>
+
+                            <a href="about.html#zach" class="learn-more">
+                                Learn More →
+                            </a>
+
+                        </div>
+
+                        <div class="founder-image">
+                            <img
+                                src="images/zach.png"
+                                alt="Zach Denman, Co-Founder of ZG Development"
+                                loading="lazy"
+                            >
+                        </div>
 
                     </article>
 
--->
-                    <!-- Project 2 -->
-<!--                  
-                    <article class="project-card">
+                    <!-- Gunnar -->
+                    <article class="founder">
 
-                        <img
-                            src="images/project-2.jpg"
-                            alt="Project 2"
-                        >
+                        <div class="founder-info founder-card">
 
-                        <h3>
-                            Project Name
-                        </h3>
+                            <p class="section-label">CO-FOUNDER</p>
 
-                        <p>
-                            Short description of the project.
-                        </p>
+                            <h3>Gunnar Inderlied</h3>
 
-                        <a href="#">
-                            View Project
-                        </a>
+                            <p>
+                                Gunnar is a co-founder of ZG Development who
+                                helps guide the company's growth and development.
+                            </p>
 
-                    </article>
+                            <p>
+                                His focus on quality, planning, and
+                                community-minded development helps bring the
+                                company's goals from concept to reality.
+                            </p>
 
--->
-                    <!-- Project 3 -->
-<!--                   
-                    <article class="project-card">
+                            <a href="about.html#gunnar" class="learn-more">
+                                Learn More →
+                            </a>
 
-                        <img
-                            src="images/project-3.jpg"
-                            alt="Project 3"
-                        >
+                        </div>
 
-                        <h3>
-                            Project Name
-                        </h3>
-
-                        <p>
-                            Short description of the project.
-                        </p>
-
-                        <a href="#">
-                            View Project
-                        </a>
-                    </article>
+                        <div class="founder-image">
+                            <img
+                                src="images/gunnar.jpg"
+                                alt="Gunnar Inderlied, Co-Founder of ZG Development"
+                                loading="lazy"
+                            >
+                        </div>
 
                     </article>
 
@@ -490,138 +298,83 @@ This is the main landing page for the ZG Development website.
             </div>
 
         </section>
--->
+
+
+        <!-- Projects and Portfolio sections: re-add here when ready -->
 
 
         <!-- ========================================================
-             PORTFOLIO SECTION
+             CONTACT / CALL TO ACTION SECTION
              ======================================================== -->
-<!--
-        <section id="portfolio" class="portfolio">
-
-            <div class="section-container">
-
-                <h2>
-                    Portfolio
-                </h2>
-
-                <p>
-                    Add information about the company's portfolio here.
-                </p>
-
--->
-                <!-- Portfolio Images -->
-<!--
-                <div class="portfolio-grid">
-
-                    <img
-                        src="images/portfolio-1.jpg"
-                        alt="Portfolio project 1"
-                    >
-
-                    <img
-                        src="images/portfolio-2.jpg"
-                        alt="Portfolio project 2"
-                    >
-
-                    <img
-                        src="images/portfolio-3.jpg"
-                        alt="Portfolio project 3"
-                    >
-
-                    <img
-                        src="images/portfolio-4.jpg"
-                        alt="Portfolio project 4"
-                    >
-
-                </div>
-
-            </div>
-
-        </section>
--->
-
-        <!-- ========================================================
-        CONTACT SECTION
-        ======================================================== -->
 
         <section id="contact" class="contact">
 
             <div class="section-container">
 
-                <!-- Contact Introduction -->
                 <div class="contact-header">
 
-                    <h2>
-                        Ready to get Started?
-                    </h2>
+                    <h2>How Can We Help You?</h2>
 
                     <p>
-                        Have a project in mind or want to learn more about
-                        ZG Development? We'd love to hear from you.
-                        Get in touch and let's build something together.
+                        Whether you're interested in investing, looking to sell
+                        a property, or simply want to learn more about ZG
+                        Development, we'd love to hear from you.
+                        Choose an option below to get started.
                     </p>
 
                 </div>
 
+                <div class="contact-content">
 
-<!-- Contact Information -->
-<div class="contact-content">
+                    <!-- Investing -->
+                    <div class="contact-option">
+                        <div class="contact-item">
+                            <h3>Interested in Investing?</h3>
+                            <p>
+                                Learn more about investment opportunities with
+                                ZG Real Estate Development.
+                            </p>
+                        </div>
+                        <a href="invest.html" class="button">
+                            Interested in Investing
+                        </a>
+                    </div>
 
+                    <!-- Selling -->
+                    <div class="contact-option">
+                        <div class="contact-item">
+                            <h3>Looking to Sell?</h3>
+                            <p>
+                                Have land or property you'd like to sell?
+                                Let's discuss how we might work together.
+                            </p>
+                        </div>
+                        <a href="sell.html" class="button">
+                            Looking to Sell
+                        </a>
+                    </div>
 
-    <!-- Investing -->
-    <div class="contact-item">
+                    <!-- General Contact -->
+                    <div class="contact-option">
+                        <div class="contact-item">
+                            <h3>Contact Us</h3>
+                            <p>
+                                Have questions or want to learn more about
+                                our company? We'd be happy to hear from you.
+                            </p>
+                        </div>
+                        <a href="contact.html" class="button">
+                            Contact Us
+                        </a>
+                    </div>
 
-        <h3>
-            Investing
-        </h3>
-
-        <p>
-            Interested in investing in a real estate development opportunity?
-        </p>
-
-    </div>
-
-
-    <!-- Selling -->
-    <div class="contact-item">
-
-        <h3>
-            Selling
-        </h3>
-
-        <p>
-            Looking to sell a property or land for development?
-        </p>
-
-    </div>
-
-
-    <!-- Location -->
-    <div class="contact-item">
-
-        <h3>
-            Location
-        </h3>
-
-        <p>
-            Huntington, Indiana
-        </p>
-
-    </div>
-
-
-</div>
-
-                <!-- Main Contact Button -->
-                <a href="contact.html" class="button">
-                    Get In Touch
-                </a>
+                </div>
 
             </div>
 
         </section>
 
+    </main>
 
 
     <!-- ============================================================
@@ -632,43 +385,23 @@ This is the main landing page for the ZG Development website.
 
         <div class="footer-container">
 
-            <!-- Business Name -->
             <p>
-                ZG Real Estate Development
+                <a href="index.html#home">ZG Real Estate Development</a>
             </p>
 
-
-            <!-- Footer Navigation -->
             <div class="footer-links">
-
-                <a href="index.html#home">
-                    Home
-                </a>
-
-                <!--<a href="index.html#projects">
-                    Projects
-                </a>
-
-                <a href="index.html#portfolio">
-                    Portfolio
-                </a>-->
-
-                <a href="index.html#about">
-                    About Us
-                </a>
-
-                <a href="index.html#meet-us">
-                    Meet Us
-                </a>
-
-                <a href="index.html#contact">
-                    Contact
-                </a>
-
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#meet-us">Meet Us</a>
+                <a href="invest.html">Invest</a>
+                <a href="sell.html">Sell</a>
+                <a href="contact.html">Contact</a>
             </div>
 
+            <p>
+                Huntington, Indiana
+            </p>
 
-            <!-- Copyright -->
             <p>
                 &copy; 2026 ZG Real Estate Development LLC. All rights reserved.
             </p>
