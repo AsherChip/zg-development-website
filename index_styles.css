@@ -2,40 +2,38 @@
 ZG Real Estate Development Website
 Main Page Styles
 
-This file contains the styling for the main page.
 Global variables are stored in variables.css.
+
+Contents:
+  1. Base
+  2. Navigation
+  3. Layout and shared elements
+  4. Hero
+  5. About
+  6. Meet Us
+  7. Projects and Portfolio (not used yet)
+  8. Contact
+  9. Footer
+  10. Tablet (max 900px)
+  11. Phone (max 768px)
+  12. Accessibility
 */
 
 
 /* ============================================================
-   INITIALIZING STYLES
+   1. BASE
    ============================================================ */
 
-/* Remove default browser spacing and make sizing predictable */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* Make the HTML and body fill the entire screen */
-html,
-body {
-    height: 100%;
-}
-
-
-/* Enable smooth scrolling when using navigation links */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--nav-height);
 }
-
-
-/* ============================================================
-   BODY
-   ============================================================ */
 
 body {
     font-family: var(--font-main);
@@ -43,24 +41,27 @@ body {
     color: var(--color-text);
 }
 
-
-/* Remove default link styling */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Safety net so no image can ever overflow its container */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* ============================================================
-   NAVIGATION BAR
+   2. NAVIGATION
    ============================================================ */
 
 .nav {
     width: 100%;
 }
 
-
-/* Main navigation container */
 .nav-container {
     display: flex;
     align-items: center;
@@ -75,7 +76,6 @@ a {
     padding: 0 30px;
 
     background-color: rgba(255, 255, 255, 0.8);
-
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
@@ -84,33 +84,19 @@ a {
     z-index: 1000;
 }
 
-
-/* ============================================================
-   NAVIGATION LOGO
-   ============================================================ */
-
 .nav-logo {
     display: flex;
     align-items: center;
 
     margin-right: auto;
-
     height: 80px;
 }
 
 .nav-logo img {
-    display: block;
-
     height: 80px;
     width: auto;
-
     object-fit: contain;
 }
-
-
-/* ============================================================
-   NAVIGATION LINKS
-   ============================================================ */
 
 .nav-links {
     display: flex;
@@ -118,8 +104,6 @@ a {
     gap: 10px;
 }
 
-
-/* Individual navigation item */
 .nav-item {
     padding: var(--nav-item-padding);
 
@@ -135,31 +119,18 @@ a {
 }
 
 
-/* Navigation item when the mouse is hovering over it */
-.nav-item:hover {
-    color: var(--color-nav-hover);
-    border-color: var(--color-accent);
-}
-
-
 /* ============================================================
-   MAIN CONTENT
+   3. LAYOUT AND SHARED ELEMENTS
    ============================================================ */
 
 main {
     width: 100%;
 }
 
-
-/* ============================================================
-   GENERAL SECTION STYLING
-   ============================================================ */
-
 section {
     width: 100%;
     padding: var(--section-padding) var(--content-padding);
 }
-
 
 /* Keeps content from becoming too wide on large screens */
 .section-container {
@@ -168,106 +139,25 @@ section {
     margin: 0 auto;
 }
 
-
-/* ============================================================
-   HERO SECTION
-   ============================================================ */
-
-.hero {
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: calc(var(--nav-height) + 40px) 20px 60px;
-
-    background-color: var(--color-background);
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2.25rem;
 }
 
-
-/* ---------- Hero Card ---------- */
-
-.hero-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 1000px;
-    max-width: 90%;
-
-    padding: 60px;
-
-    background-color: white;
-
-    border: 2px solid var(--color-accent);
-    border-radius: 8px;
+section p {
+    line-height: 1.6;
 }
 
-
-/* ---------- Hero Logo ---------- */
-
-.hero-logo {
-    display: block;
-
-    width: 700px;
-    max-width: 150%;
-
-    height: auto;
-
-    margin-bottom: 35px;
-    opacity: 85%;
-}
-
-
-/* ---------- Hero Buttons ---------- */
-
-.hero-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    gap: 15px;
-}
-
-.hero .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-width: 150px;
-
-    padding: 14px 28px;
-
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-
-    border: 2px solid var(--color-accent);
-    border-radius: 5px;
-
-    font-size: 1rem;
-    font-weight: 600;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease;
-}
-
-
-.hero .button:hover {
-    background-color: var(--color-primary);
+/* Small uppercase labels used throughout */
+.section-label {
     color: var(--color-accent);
+
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
 }
 
-
-/* ============================================================
-   BUTTONS
-   ============================================================ */
-
+/* Default button (the hero and contact sections restyle it) */
 .button {
     display: inline-block;
 
@@ -283,36 +173,129 @@ section {
         color 0.2s ease;
 }
 
+/* Accent-colored buttons (hero and contact sections) */
+.hero .button,
+.contact .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-.button:hover {
+    min-width: 150px;
+
+    padding: 14px 28px;
+
     background-color: var(--color-accent);
-    color: var(--color-text);
+    color: var(--color-primary);
+
+    border: 2px solid var(--color-accent);
+    border-radius: 5px;
+
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 
 /* ============================================================
-   SECTION HEADINGS
+   4. HERO
    ============================================================ */
 
-section h2 {
-    margin-bottom: 20px;
+.hero {
+    min-height: 100vh;
+    min-height: 100svh; /* accounts for mobile browser toolbars */
 
-    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: calc(var(--nav-height) + 40px) 20px 30px;
+
+    background-color: var(--color-background);
 }
 
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-section p {
-    line-height: 1.6;
+    width: 1000px;
+    max-width: 90%;
+
+    padding: 35px 60px;
+
+    background-color: white;
+
+    border: 2px solid var(--color-accent);
+    border-radius: 8px;
+}
+
+.hero-logo {
+    width: 700px;
+    max-width: 100%;
+
+    margin-bottom: 10px;
+    opacity: 85%;
+}
+
+.hero-tagline {
+    margin: 1rem 0 1.5rem;
+
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-weight: 600;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 35px;
+
+    color: var(--color-primary);
+
+    transition: opacity 0.2s ease;
+}
+
+.scroll-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.scroll-arrow {
+    color: var(--color-accent);
+
+    font-size: 1.8rem;
+    line-height: 1;
+
+    animation: scroll-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(8px); }
 }
 
 
 /* ============================================================
-   ABOUT SECTION
+   5. ABOUT
    ============================================================ */
 
 .about {
-    width: 100%;
-
     margin-top: 10px;
 
     padding: 110px var(--content-padding) 120px;
@@ -321,9 +304,6 @@ section p {
 
     background-color: var(--color-background);
 }
-
-
-/* ---------- About Header ---------- */
 
 .about-header {
     width: 100%;
@@ -334,92 +314,53 @@ section p {
     text-align: center;
 }
 
-
 .about-header .section-label {
     margin: 0;
-
-    color: var(--color-accent);
-
     font-size: 0.9rem;
-    font-weight: 700;
-
     letter-spacing: 3px;
-
-    text-transform: uppercase;
 }
-
-
-/* ---------- About Content ---------- */
 
 .about-business {
     display: flex;
     flex-direction: column;
-
     gap: 100px;
-
     width: 100%;
 }
-
-
-/* ---------- About Row ---------- */
 
 .about-row {
     width: 100%;
     max-width: 1050px;
-
     margin: 0 auto;
 }
 
-
-/* ---------- About Title ---------- */
-
 .about-row-title {
-    width: 100%;
-
     margin-bottom: 28px;
-
     padding-left: 20px;
-
     text-align: left;
 }
 
-
 .about-row-title .section-label {
     margin-bottom: 12px;
-
-    color: var(--color-accent);
-
     font-size: 0.85rem;
-    font-weight: 700;
-
-    letter-spacing: 2.5px;
-
-    text-transform: uppercase;
 }
 
-
-.about-row-title h2 {
+/* Large headings shared by About and Meet Us */
+.about-row-title h2,
+.meet-us-header h2 {
     margin: 0;
 
     color: var(--color-primary);
 
     font-size: clamp(2.3rem, 4vw, 3.6rem);
-
     font-weight: 600;
-
     line-height: 1.1;
-
     letter-spacing: -1.5px;
 
-    white-space: nowrap;
+    text-wrap: balance;
 }
-
-
-/* ---------- About Cards ---------- */
 
 .about-card {
     width: 100%;
-
     min-height: 230px;
 
     padding: 45px 50px;
@@ -434,54 +375,34 @@ section p {
         0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
-
-/* ---------- Mission Card ---------- */
+.about-card p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
 
 .mission-card {
     background-color: var(--color-primary);
-
-    color: #FFFFFF;
 }
-
 
 .mission-card p {
-    margin: 0;
-
     color: rgba(255, 255, 255, 0.82);
-
-    font-size: 1.2rem;
-
-    line-height: 1.8;
 }
-
-
-/* ---------- Approach Card ---------- */
 
 .approach-card {
     background-color: var(--color-accent);
-
-    color: var(--color-primary);
 }
 
-
 .approach-card p {
-    margin: 0;
-
     color: var(--color-primary);
-
-    font-size: 1.2rem;
-
-    line-height: 1.8;
 }
 
 
 /* ============================================================
-   MEET US SECTION
+   6. MEET US
    ============================================================ */
 
 .meet-us {
-    width: 100%;
-
     padding: 100px var(--content-padding);
 
     border-top: 1px solid rgba(0, 0, 0, 0.12);
@@ -489,107 +410,54 @@ section p {
     background-color: var(--color-background);
 }
 
-
-/* ---------- Meet Us Header ---------- */
-
 .meet-us-header {
     width: 100%;
     max-width: 1050px;
 
     margin: 0 auto 85px;
-
     padding-left: 20px;
 
     text-align: left;
 }
 
-
 .meet-us-header .section-label {
     margin-bottom: 80px;
-
-    color: var(--color-accent);
-
     font-size: 0.85rem;
-    font-weight: 700;
-
-    letter-spacing: 2.5px;
-
-    text-transform: uppercase;
-
     text-align: center;
 }
-
-
-.meet-us-header h2 {
-    margin: 0;
-
-    color: var(--color-primary);
-
-    font-size: clamp(2.3rem, 4vw, 3.6rem);
-
-    font-weight: 600;
-
-    line-height: 1.1;
-
-    letter-spacing: -1.5px;
-
-    white-space: nowrap;
-}
-
-
-/* ============================================================
-   MEET US / FOUNDERS
-   ============================================================ */
 
 .founders {
     display: flex;
     flex-direction: column;
-
     gap: 80px;
 
     max-width: 1050px;
     margin: 0 auto;
 }
 
-
 .founder {
     display: grid;
-
     grid-template-columns: 1fr 380px;
-
     gap: 45px;
-
     align-items: center;
 }
-
-
-/* Founder Information Card */
 
 .founder-card {
     padding: 45px;
 
-    background: radial-gradient(
-        circle at 20% 20%,
-        #303030 0%,
-        #252525 70%
-    );
+    background: radial-gradient(circle at 20% 20%, #303030 0%, #252525 70%);
 
     border-radius: 8px;
 
     box-shadow:
-        0 18px 35px rgba(0, 0, 0, .14),
-        0 4px 10px rgba(0, 0, 0, .06);
+        0 18px 35px rgba(0, 0, 0, 0.14),
+        0 4px 10px rgba(0, 0, 0, 0.06);
 }
-
 
 .founder-card .section-label {
     margin-bottom: 12px;
-
-    color: var(--color-accent);
-
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
-
 
 .founder-card h3 {
     margin-bottom: 25px;
@@ -600,19 +468,14 @@ section p {
     font-weight: 600;
 }
 
-
 .founder-card p:not(.section-label) {
     margin-bottom: 16px;
 
-    color: rgba(255, 255, 255, .85);
+    color: rgba(255, 255, 255, 0.85);
 
     font-size: 1rem;
-
     line-height: 1.75;
 }
-
-
-/* Founder Photo */
 
 .founder-image {
     width: 100%;
@@ -620,81 +483,69 @@ section p {
 
     overflow: hidden;
 
-    border-radius: 8px;
-
     border: 3px solid var(--color-accent);
+    border-radius: 8px;
 }
-
 
 .founder-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
-    display: block;
+    object-position: center;
 }
-
-
-/* Learn More */
 
 .learn-more {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 12px 24px;
 
-    color: var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-primary);
 
-    font-size: .9rem;
+    border: 2px solid var(--color-accent);
+    border-radius: 5px;
+
+    font-size: 0.9rem;
     font-weight: 700;
-
     letter-spacing: 1px;
 
-    transition: opacity .2s ease;
-}
-
-
-.learn-more:hover {
-    opacity: .75;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 
 /* ============================================================
-   PROJECTS SECTION
+   7. PROJECTS AND PORTFOLIO (not used yet)
+   Ready for when those sections are added back to the HTML.
    ============================================================ */
 
 .projects {
     background-color: #ffffff;
 }
 
+.portfolio {
+    background-color: var(--color-background);
+}
 
-/* Horizontal scrolling project list */
-
-.project-grid {
+/* Horizontal scrolling lists */
+.project-grid,
+.portfolio-grid {
     display: flex;
-
+    flex-wrap: nowrap;
     gap: 20px;
 
     margin-top: 40px;
-
-    /* Allow horizontal scrolling */
-    overflow-x: auto;
-
-    /* Smooth scrolling */
-    scroll-behavior: smooth;
-
-    /* Prevent cards from wrapping */
-    flex-wrap: nowrap;
-
-    /* Space at the bottom for the scrollbar */
     padding-bottom: 15px;
 
-    /* Allows touch swiping on phones */
+    overflow-x: auto;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 }
-
-
-/* Individual project card */
 
 .project-card {
     flex: 0 0 350px;
@@ -704,98 +555,34 @@ section p {
     background-color: var(--color-background);
 
     border-radius: var(--border-radius);
-
     box-shadow: var(--shadow-medium);
 }
 
-
-/* Project card image */
-
 .project-card img {
-    display: block;
-
     width: 100%;
     height: 220px;
-
     object-fit: cover;
 }
-
-
-/* Project card heading */
 
 .project-card h3 {
     padding: 20px 20px 10px;
 }
 
-
-/* Project card description */
-
 .project-card p {
     padding: 0 20px 20px;
-
     color: var(--color-secondary);
 }
 
-
-/* Project card link */
-
 .project-card a {
     display: inline-block;
-
     margin: 0 20px 20px;
 
     color: var(--color-text);
-
     font-weight: bold;
 }
 
-
-.project-card a:hover {
-    color: var(--color-accent);
-}
-
-
-/* ============================================================
-   PORTFOLIO SECTION
-   ============================================================ */
-
-.portfolio {
-    background-color: var(--color-background);
-}
-
-
-/* Horizontal scrolling portfolio list */
-
-.portfolio-grid {
-    display: flex;
-
-    gap: 20px;
-
-    margin-top: 40px;
-
-    /* Allow horizontal scrolling */
-    overflow-x: auto;
-
-    /* Smooth scrolling */
-    scroll-behavior: smooth;
-
-    /* Keep images side-by-side */
-    flex-wrap: nowrap;
-
-    /* Space below the images */
-    padding-bottom: 15px;
-
-    /* Allows touch swiping on phones */
-    -webkit-overflow-scrolling: touch;
-}
-
-
-/* Portfolio images */
-
 .portfolio-grid img {
     flex: 0 0 450px;
-
-    display: block;
 
     width: 450px;
     height: 300px;
@@ -807,131 +594,69 @@ section p {
 
 
 /* ============================================================
-   CONTACT SECTION
+   8. CONTACT
    ============================================================ */
 
 .contact {
     background-color: var(--color-primary);
-
     color: #FFFFFF;
-
     text-align: center;
 }
 
-
-/* ---------- Contact Header ---------- */
-
 .contact-header {
     max-width: 700px;
-
     margin: 0 auto 50px;
 }
 
-
 .contact-header h2 {
     margin-bottom: 20px;
-
     color: #FFFFFF;
 }
-
 
 .contact-header p {
     color: rgba(255, 255, 255, 0.7);
-
     line-height: 1.7;
 }
 
-
-/* ---------- Contact Information ---------- */
-
 .contact-content {
     display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 30px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
 
     max-width: 1000px;
-
     margin: 0 auto 40px;
 }
 
-
-/* Individual contact item */
+.contact-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
 
 .contact-item {
+    width: 100%;
+    flex: 1;
+
     padding: 25px;
 
     border: 1px solid rgba(255, 255, 255, 0.15);
-
     border-radius: var(--border-radius-medium);
 }
 
-
-/* Contact heading */
-
 .contact-item h3 {
     margin-bottom: 10px;
-
     color: var(--color-accent);
 }
-
-
-/* Contact links */
-
-.contact-item a {
-    color: #FFFFFF;
-
-    transition: color 0.2s ease;
-}
-
-
-.contact-item a:hover {
-    color: var(--color-accent);
-}
-
-
-/* Contact location text */
 
 .contact-item p {
     color: rgba(255, 255, 255, 0.8);
 }
 
 
-/* ---------- Contact Button ---------- */
-
-.contact .button {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-width: 150px;
-
-    padding: 14px 28px;
-
-    background-color: var(--color-accent);
-
-    color: var(--color-primary);
-
-    border: 1px solid var(--color-accent);
-
-    border-radius: 5px;
-
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-
-.contact .button:hover {
-    background-color: var(--color-primary);
-
-    color: var(--color-accent);
-}
-
-
 /* ============================================================
-   FOOTER
+   9. FOOTER
    ============================================================ */
 
 footer {
@@ -940,437 +665,489 @@ footer {
     padding: 40px var(--content-padding);
 
     background-color: var(--color-footer-background);
-
     color: var(--color-footer-text);
 
     text-align: center;
 }
 
-
 .footer-container {
     width: 100%;
-
     max-width: var(--content-width);
-
     margin: 0 auto;
 }
 
+.footer-container p {
+    margin: 8px 0;
+}
 
 .footer-links {
     display: flex;
-
+    flex-wrap: wrap;
     justify-content: center;
-
-    gap: 20px;
+    gap: 12px 20px;
 
     margin: 20px 0;
 }
 
 
-.footer-links a:hover {
-    color: var(--color-accent);
+/* ============================================================
+   HOVER EFFECTS
+   Only on devices that truly hover, so taps on phones
+   don't leave buttons stuck in their hover state.
+   ============================================================ */
+
+@media (hover: hover) {
+
+    .nav-item:hover {
+        color: var(--color-nav-hover);
+        border-color: var(--color-accent);
+    }
+
+    .button:hover {
+        background-color: var(--color-accent);
+        color: var(--color-text);
+    }
+
+    .hero .button:hover,
+    .contact .button:hover {
+        background-color: var(--color-primary);
+        color: var(--color-accent);
+    }
+
+    .scroll-indicator:hover {
+        opacity: 0.75;
+    }
+
+    .learn-more:hover {
+        background-color: transparent;
+        color: var(--color-accent);
+        transform: translateX(3px);
+    }
+
+    .project-card a:hover,
+    .contact-item a:hover,
+    .footer-links a:hover {
+        color: var(--color-accent);
+    }
 }
 
 
 /* ============================================================
-   MOBILE / PHONE SCREENS
+   LARGE SCREENS (1800px and up, e.g. 1440p monitors)
+   Scales content up so it doesn't float in a sea of white space.
+   ============================================================ */
+
+@media (min-width: 1800px) {
+
+    :root {
+        --content-width: 1500px;
+    }
+
+    /* Keep nav content aligned with the page content */
+    .nav-container {
+        padding-left: max(30px, calc((100% - 1500px) / 2));
+        padding-right: max(30px, calc((100% - 1500px) / 2));
+    }
+
+    .nav-item {
+        font-size: 1.1rem;
+    }
+
+    /* Hero */
+    .hero-card {
+        width: 1300px;
+        padding: 50px 80px;
+    }
+
+    .hero-logo {
+        width: 950px;
+    }
+
+    .hero .button {
+        min-width: 200px;
+        padding: 18px 36px;
+        font-size: 1.15rem;
+    }
+
+    .scroll-text {
+        font-size: 1rem;
+    }
+
+    /* About */
+    .about-header,
+    .about-row,
+    .meet-us-header,
+    .founders {
+        max-width: 1400px;
+    }
+
+    .about-card {
+        min-height: 280px;
+        padding: 55px 65px;
+    }
+
+    .about-card p {
+        font-size: 1.4rem;
+    }
+
+    /* Meet Us */
+    .founder {
+        grid-template-columns: 1fr 480px;
+        gap: 60px;
+    }
+
+    .founder-card {
+        padding: 55px;
+    }
+
+    .founder-card h3 {
+        font-size: 2.4rem;
+    }
+
+    .founder-card p:not(.section-label) {
+        font-size: 1.15rem;
+    }
+
+    .founder-image {
+        height: 580px;
+    }
+
+    /* Contact */
+    .contact-header {
+        max-width: 850px;
+    }
+
+    .contact-content {
+        max-width: 1300px;
+        gap: 32px;
+    }
+
+    .contact-item {
+        padding: 35px 30px;
+    }
+
+    .contact-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .contact-item p,
+    .contact-header p {
+        font-size: 1.15rem;
+    }
+}
+
+
+/* Extra-large screens (2400px and up, e.g. 4K) */
+@media (min-width: 2400px) {
+
+    :root {
+        --content-width: 1900px;
+    }
+
+    .nav-container {
+        padding-left: max(30px, calc((100% - 1900px) / 2));
+        padding-right: max(30px, calc((100% - 1900px) / 2));
+    }
+
+    .hero-card {
+        width: 1600px;
+    }
+
+    .hero-logo {
+        width: 1150px;
+    }
+
+    .about-header,
+    .about-row,
+    .meet-us-header,
+    .founders {
+        max-width: 1800px;
+    }
+
+    .contact-content {
+        max-width: 1700px;
+    }
+}
+
+
+/* ============================================================
+   10. TABLET (max 900px)
+   Stack the founder cards before the columns get cramped.
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .founder {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-image {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        margin: 0 auto;
+    }
+}
+
+
+/* ============================================================
+   11. PHONE (max 768px)
    ============================================================ */
 
 @media (max-width: 768px) {
 
-    /* --------------------------------------------------------
-       GENERAL
-       -------------------------------------------------------- */
+    /* ---------- General ---------- */
+
+    html {
+        /* Phone nav is taller than the desktop one; adjust if
+           headings land under it after tapping a nav link */
+        scroll-padding-top: 130px;
+    }
 
     section {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .section-container {
-        width: 100%;
-    }
-
-
-    /* --------------------------------------------------------
-    NAVIGATION
-    -------------------------------------------------------- */
-
-    .nav-container {
-        height:auto;
-        min-height: 50px;
-
-        padding:10px 15px;
-
-        flex-direction:column;
-
-        gap:8px;
-    }
-
-    .nav-logo {
-        display:none;
-    }
-
-    .nav-links {
-        width:100%;
-
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-
-        gap:4px;
-    }
-
-    .nav-item {
-        padding:12px 12px;
-
-        font-size:.9rem;
-
-        text-align:center;
-
-        border:1px solid var(--color-accent);
-        border-radius:5px;
-    }
-
-
-    /* --------------------------------------------------------
-       HERO / HOME
-       -------------------------------------------------------- */
-
-    .hero {
-        min-height: 100vh;
-
-        padding-top: 100px;
-        padding-bottom: 60px;
-
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-
-    .hero-card {
-        width: 100%;
-
-        max-width: 500px;
-
-        padding: 150px 25px;
-    }
-
-
-    .hero-logo {
-        width: 400px;
-
-        max-width: 100%;
-
-        margin-bottom: 30px;
-    }
-
-
-    .hero-buttons {
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: row;
-
-        justify-content: center;
-
-        align-items: center;
-
-        gap: 10px;
-    }
-
-
-    .hero .button {
-        min-width: 0;
-
-        padding: 12px 18px;
-
-        font-size: 0.95rem;
-
-        margin-top: 0;
-    }
-
-
-    /* --------------------------------------------------------
-       GENERAL HEADINGS
-       -------------------------------------------------------- */
-
     section h2 {
-        font-size: 28px;
-
+        font-size: 1.75rem;
         line-height: 1.2;
     }
 
+    .button {
+        padding: 12px 22px;
+        font-size: 0.95rem;
+    }
 
-    /* --------------------------------------------------------
-       ABOUT SECTION
-       -------------------------------------------------------- */
+
+    /* ---------- Navigation ---------- */
+
+    .nav-container {
+        height: auto;
+        min-height: 50px;
+
+        padding: 10px 15px;
+
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-item {
+        padding: 12px;
+
+        font-size: 0.9rem;
+        text-align: center;
+
+        border: 1px solid var(--color-accent);
+        border-radius: 5px;
+    }
+
+
+    /* ---------- Hero ---------- */
+
+    .hero {
+        padding: 100px 20px 60px;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 500px;
+        padding: 40px 25px;
+    }
+
+    .hero-logo {
+        width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .hero .button {
+        min-width: 0;
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 0.95rem;
+    }
+
+    .scroll-indicator {
+        margin-top: 25px;
+    }
+
+
+    /* ---------- About ---------- */
 
     .about {
         padding: 80px 20px 90px;
     }
 
-
     .about-header {
         margin-bottom: 60px;
     }
-
 
     .about-business {
         gap: 60px;
     }
 
-
-    .about-row {
-        width: 100%;
-    }
-
-
     .about-row-title {
         padding-left: 0;
-
         margin-bottom: 25px;
     }
 
-
-    .about-row-title h2 {
+    .about-row-title h2,
+    .meet-us-header h2 {
         font-size: 2.3rem;
-
-        line-height: 1.1;
-
-        white-space: normal;
     }
-
 
     .about-card {
-        min-height: 0;
-
-        padding: 30px 25px;
-
         display: block;
+        min-height: 0;
+        padding: 30px 25px;
     }
 
-
-    .mission-card p,
-    .approach-card p {
+    .about-card p {
         font-size: 1rem;
-
         line-height: 1.7;
     }
 
 
-    /* --------------------------------------------------------
-       MEET US SECTION
-       -------------------------------------------------------- */
+    /* ---------- Meet Us ---------- */
 
     .meet-us {
         padding: 80px 20px 90px;
     }
 
-
     .meet-us-header {
         margin-bottom: 60px;
-
         padding-left: 0;
     }
-
 
     .meet-us-header .section-label {
         margin-bottom: 40px;
     }
 
-
-    .meet-us-header h2 {
-        font-size: 2.3rem;
-
-        line-height: 1.1;
-
-        white-space: normal;
-    }
-
-
     .founders {
         gap: 60px;
     }
 
-
     .founder {
         display: flex;
-
         flex-direction: column;
-
-        gap: 30px;
+        gap: 25px;
     }
-
-
-    /* Founder information comes first */
 
     .founder-card {
         width: 100%;
-
         padding: 30px 25px;
-
-        order: 1;
     }
-
 
     .founder-card h3 {
         font-size: 1.7rem;
-
         line-height: 1.2;
     }
 
-
     .founder-card p:not(.section-label) {
         font-size: 0.95rem;
-
         line-height: 1.7;
     }
 
-
-    /* Founder photo comes underneath */
-
-    .founder {
-        display:flex;
-        flex-direction:column;
-
-        gap:30px;
-    }
-
     .founder-image {
-        width:100%;
-        height:350px;
-
-        order:1;
-    }
-
-    .founder-card {
-        width:100%;
-
-        padding:30px 25px;
-
-        order:2;
+        max-width: 350px;
     }
 
 
-    /* --------------------------------------------------------
-       PROJECTS
-       -------------------------------------------------------- */
+    /* ---------- Projects and Portfolio ---------- */
 
-    .project-grid {
-        display: flex;
-
+    .project-grid,
+    .portfolio-grid {
         gap: 15px;
-
-        overflow-x: auto;
-
-        padding-bottom: 15px;
     }
-
 
     .project-card {
         flex: 0 0 85vw;
     }
 
-
     .project-card img {
         height: 200px;
     }
 
-
-    /* --------------------------------------------------------
-       PORTFOLIO
-       -------------------------------------------------------- */
-
-    .portfolio-grid {
-        display: flex;
-
-        gap: 15px;
-
-        overflow-x: auto;
-
-        padding-bottom: 15px;
-    }
-
-
     .portfolio-grid img {
         flex: 0 0 85vw;
-
         width: 85vw;
-
         height: 250px;
     }
 
 
-    /* --------------------------------------------------------
-       CONTACT
-       -------------------------------------------------------- */
+    /* ---------- Contact ---------- */
 
     .contact {
         padding: 80px 20px 90px;
     }
 
-
     .contact-header {
         margin-bottom: 40px;
     }
 
-
-    .contact-header h2 {
-        font-size: 28px;
-    }
-
-
     .contact-content {
-        display: flex;
-
-        flex-direction: column;
-
+        grid-template-columns: 1fr;
         gap: 20px;
-
-        width: 100%;
     }
-
 
     .contact-item {
-        width: 100%;
-
         padding: 25px 20px;
     }
-
 
     .contact-item h3 {
         font-size: 1.1rem;
     }
 
 
-    /* --------------------------------------------------------
-       BUTTONS
-       -------------------------------------------------------- */
-
-    .button {
-        padding: 12px 22px;
-
-        font-size: 0.95rem;
-    }
-
-
-    /* --------------------------------------------------------
-       FOOTER
-       -------------------------------------------------------- */
+    /* ---------- Footer ---------- */
 
     footer {
         padding: 35px 20px;
     }
+}
 
 
-    .footer-links {
-        flex-wrap: wrap;
+/* ============================================================
+   12. ACCESSIBILITY
+   ============================================================ */
 
-        gap: 12px 20px;
+/* Visible outline for keyboard users */
+a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
 
-        margin: 20px 0;
+/* Turn off motion for people who have asked for less of it */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
     }
 
+    .scroll-arrow {
+        animation: none;
+    }
+
+    .learn-more:hover {
+        transform: none;
+    }
 }
